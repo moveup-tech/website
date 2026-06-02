@@ -2,7 +2,7 @@
 
 const projetos = [
   {
-    imagem: "/website/assets/cover.png",
+    imagem: "/assets/cover.png",
     alt: "Tela do aplicativo de patrulhamento e monitoramento",
     titulo: "Aplicativo para gestão de patrulhas e vigilância",
     descricao:
@@ -12,7 +12,7 @@ const projetos = [
       "Maior rastreabilidade das operações e redução do tempo de resposta a incidentes.",
   },
   {
-    imagem: "/website/assets/cover.png",
+    imagem: "/assets/cover.png",
     alt: "Plataforma de aluguel de motocicletas",
     titulo: "Sistema de locação e assinatura de motocicletas",
     descricao:
@@ -22,7 +22,7 @@ const projetos = [
       "Automação do processo de locação e redução significativa de tarefas operacionais.",
   },
   {
-    imagem: "/website/assets/cover.png",
+    imagem: "/assets/cover.png",
     alt: "Dashboard com indicadores de vendas e estoque",
     titulo: "Business Intelligence para distribuidora de pneus",
     descricao:
@@ -32,7 +32,7 @@ const projetos = [
       "Melhor visibilidade dos indicadores estratégicos e apoio à tomada de decisão.",
   },
   {
-    imagem: "/website/assets/cover.png",
+    imagem: "/assets/cover.png",
     alt: "Painel de notificações corporativas",
     titulo: "Microserviço de notificações corporativas",
     descricao:
@@ -42,7 +42,7 @@ const projetos = [
       "Maior confiabilidade na entrega de mensagens e padronização das comunicações entre sistemas.",
   },
   {
-    imagem: "/website/assets/cover.png",
+    imagem: "/assets/cover.png",
     alt: "Plataforma de streaming ao vivo",
     titulo: "Infraestrutura de streaming para transmissões ao vivo",
     descricao:
@@ -52,7 +52,7 @@ const projetos = [
       "Suporte a transmissões simultâneas com alta disponibilidade e baixa latência.",
   },
   {
-    imagem: "/website/assets/cover.png",
+    imagem: "/assets/cover.png",
     alt: "Sistema de integração entre aplicações",
     titulo: "Plataforma de integrações e automação de processos",
     descricao:
