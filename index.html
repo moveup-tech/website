@@ -1,0 +1,662 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Moveup Tecnologia LTDA | Desenvolvimento, Integrações e Consultoria
+    </title>
+    <meta
+      name="description"
+      content="A Moveup Tecnologia LTDA desenvolve e mantém softwares web, mobile e desktop, além de integrações, automações e consultoria especializada em desenvolvimento."
+    />
+    <meta
+      name="keywords"
+      content="Moveup Tecnologia, desenvolvimento de software, software web, software mobile, software desktop, integrações, automações, consultoria em desenvolvimento"
+    />
+    <meta name="author" content="Moveup Tecnologia LTDA" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://moveuptecnologia.com.br/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Moveup Tecnologia LTDA" />
+    <meta
+      property="og:title"
+      content="Moveup Tecnologia LTDA | Solucoes em Software e Consultoria"
+    />
+    <meta
+      property="og:description"
+      content="Parceira em desenvolvimento e manutencao de softwares web, mobile e desktop, integrações, automações e consultoria tecnica."
+    />
+    <meta property="og:url" content="https://moveuptecnologia.com.br/" />
+    <meta
+      property="og:image"
+      content="https://moveuptecnologia.com.br/assets/og-cover.jpg"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Moveup Tecnologia LTDA | Desenvolvimento e Integracoes"
+    />
+    <meta
+      name="twitter:description"
+      content="Software sob medida, automacoes, integrações e consultoria para acelerar sua operacao."
+    />
+    <meta
+      name="twitter:image"
+      content="https://moveuptecnologia.com.br/assets/og-cover.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="/public/favicon.png" type="image/png" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+              roboto: ["Roboto", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script>
+      (function () {
+        const storedTheme = localStorage.getItem("moveup-theme");
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)",
+        ).matches;
+        if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+          document.documentElement.classList.add("dark");
+        }
+      })();
+    </script>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .reveal {
+        opacity: 0;
+        transform: translateY(20px) scale(0.985);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+        transition-delay: var(--reveal-delay, 0ms);
+      }
+
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Moveup Tecnologia LTDA",
+        "url": "https://moveuptecnologia.com.br/",
+        "logo": "https://moveuptecnologia.com.br/assets/logo.png",
+        "description": "Empresa de prestacao de servicos de tecnologia com foco em desenvolvimento e manutencao de softwares, integrações, automacoes e consultoria.",
+        "areaServed": "BR",
+        "knowsAbout": [
+          "Desenvolvimento web",
+          "Desenvolvimento mobile",
+          "Desenvolvimento desktop",
+          "Integracoes de sistemas",
+          "Automacao de processos",
+          "Consultoria de desenvolvimento"
+        ]
+      }
+    </script>
+  </head>
+  <body
+    class="bg-slate-50 font-roboto text-slate-800 antialiased transition-colors dark:bg-slate-950 dark:text-slate-200"
+  >
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_15%,rgba(16,185,129,0.25),transparent_40%),radial-gradient(circle_at_85%_0%,rgba(20,184,166,0.2),transparent_36%),linear-gradient(to_bottom,rgba(236,253,245,0.8),rgba(248,250,252,1))] dark:bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.2),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(5,150,105,0.15),transparent_40%),linear-gradient(to_bottom,rgba(2,6,23,1),rgba(15,23,42,1))]"
+      aria-hidden="true"
+    ></div>
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 opacity-30 dark:opacity-20"
+      style="
+        background-image:
+          linear-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(16, 185, 129, 0.12) 1px, transparent 1px);
+        background-size: 38px 38px;
+      "
+      aria-hidden="true"
+    ></div>
+
+    <header id="site-header" class="fixed inset-x-0 top-0 z-50">
+      <div
+        id="header-shell"
+        class="mx-auto mt-3 flex w-[calc(100%-1.5rem)] max-w-6xl items-center justify-between rounded-xl border border-transparent bg-transparent px-4 py-3 transition-all duration-300 sm:mt-4 sm:w-[calc(100%-2rem)] sm:px-6 md:px-8"
+      >
+        <a
+          href="#inicio"
+          class="group inline-flex items-center gap-2"
+          aria-label="Ir para o topo"
+        >
+          <img
+            src="/assets/logo.svg"
+            alt="Logo da Moveup Tecnologia LTDA"
+            class="h-6 w-auto transition-transform group-hover:scale-105"
+          />
+        </a>
+        <div class="flex items-center gap-3">
+          <button
+            id="theme-toggle"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white/80 text-slate-700 transition hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:border-emerald-500"
+            aria-label="Alternar tema"
+          >
+            <i class="ph ph-moon-stars text-xl dark:hidden"></i>
+            <i class="ph ph-sun text-xl hidden dark:block"></i>
+          </button>
+          <a
+            href="#contato"
+            class="inline-flex items-center gap-2 rounded-lg border border-emerald-600 px-3 py-2 text-sm font-medium text-emerald-700 transition hover:bg-emerald-600 hover:text-white dark:border-emerald-500 dark:text-emerald-300 dark:hover:text-white sm:px-4"
+          >
+            <i class="ph ph-chat-circle-dots text-base sm:hidden"></i>
+            <span class="hidden sm:inline">Fale com a gente</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="inicio" class="pt-20 sm:pt-24 md:pt-28 lg:pt-32">
+      <section
+        class="mx-auto grid w-full max-w-6xl gap-8 px-4 pb-12 pt-6 sm:px-6 md:grid-cols-2 md:px-8 md:pb-24"
+      >
+        <div class="reveal space-y-6" style="--reveal-delay: 50ms">
+          <p
+            class="inline-flex items-center gap-2 rounded-lg bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
+          >
+            <i class="ph ph-cpu text-base"></i>
+            Solucoes sob medida em tecnologia
+          </p>
+          <h1
+            class="font-inter text-3xl font-extrabold leading-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl"
+          >
+            Desenvolvimento, integrações e automacoes para levar seu negocio
+            mais longe
+          </h1>
+          <p
+            class="max-w-xl text-lg leading-relaxed text-slate-700 dark:text-slate-300"
+          >
+            A Moveup Tecnologia LTDA ajuda empresas a evoluirem com produtos
+            digitais robustos, manutencao continua e consultoria especializada
+            para ciclos de entrega mais rapidos e previsiveis.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a
+              href="#servicos"
+              class="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white shadow-sm transition hover:bg-emerald-700"
+              ><i class="ph ph-arrow-down text-lg"></i> Saber mais</a
+            >
+            <a
+              href="#contato"
+              class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 font-medium text-slate-700 transition hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-emerald-500 dark:hover:text-emerald-300"
+              ><i class="ph ph-chat-circle-dots text-lg"></i> Contato</a
+            >
+          </div>
+          <div
+            class="reveal grid max-w-md grid-cols-3 gap-3 pt-2 text-center"
+            style="--reveal-delay: 150ms"
+          >
+            <div
+              class="rounded-lg border border-emerald-100 bg-white p-3 dark:border-emerald-900/40 dark:bg-slate-900/80"
+            >
+              <p class="font-inter text-2xl font-bold text-emerald-700">Web</p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Aplicacoes
+              </p>
+            </div>
+            <div
+              class="rounded-lg border border-emerald-100 bg-white p-3 dark:border-emerald-900/40 dark:bg-slate-900/80"
+            >
+              <p class="font-inter text-2xl font-bold text-emerald-700">
+                Mobile
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                iOS e Android
+              </p>
+            </div>
+            <div
+              class="rounded-lg border border-emerald-100 bg-white p-3 dark:border-emerald-900/40 dark:bg-slate-900/80"
+            >
+              <p class="font-inter text-2xl font-bold text-emerald-700">
+                Desktop
+              </p>
+              <p class="text-sm text-slate-600 dark:text-slate-400">
+                Sistemas internos
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside
+          class="reveal overflow-hidden rounded-xl border border-emerald-100 bg-white/85 p-6 shadow-sm backdrop-blur dark:border-emerald-900/40 dark:bg-slate-900/70"
+          style="--reveal-delay: 120ms"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Ambiente com placa de circuito e componentes tecnologicos"
+            class="h-48 w-full rounded-lg object-cover"
+            loading="lazy"
+          />
+          <h2
+            class="mt-5 font-inter text-2xl font-bold text-slate-900 dark:text-white"
+          >
+            O que entregamos
+          </h2>
+          <p class="mt-3 text-slate-700 dark:text-slate-300">
+            Time tecnico para construir, integrar e evoluir software com foco em
+            performance, seguranca e escala.
+          </p>
+          <ul class="mt-5 space-y-3 text-slate-700 dark:text-slate-300">
+            <li
+              class="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30"
+            >
+              <i class="ph ph-code text-emerald-700 dark:text-emerald-300"></i
+              >Desenvolvimento sob demanda
+            </li>
+            <li
+              class="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30"
+            >
+              <i class="ph ph-plugs text-emerald-700 dark:text-emerald-300"></i
+              >Integracoes com APIs e plataformas
+            </li>
+            <li
+              class="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30"
+            >
+              <i
+                class="ph ph-gear-six text-emerald-700 dark:text-emerald-300"
+              ></i
+              >Automacao de processos
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <section
+        id="servicos"
+        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
+      >
+        <div
+          class="reveal mb-8 flex items-end justify-between gap-4"
+          style="--reveal-delay: 40ms"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
+            >
+              Servicos principais
+            </p>
+            <h2
+              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
+            >
+              Tecnologia aplicada ao resultado
+            </h2>
+          </div>
+        </div>
+        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <article
+            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 20ms"
+          >
+            <i
+              class="ph ph-globe text-2xl text-emerald-600 dark:text-emerald-300"
+            ></i>
+            <h3
+              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
+            >
+              Software Web
+            </h3>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">
+              Plataformas, paineis e portais com foco em usabilidade e
+              produtividade.
+            </p>
+          </article>
+          <article
+            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 60ms"
+          >
+            <i
+              class="ph ph-device-mobile text-2xl text-emerald-600 dark:text-emerald-300"
+            ></i>
+            <h3
+              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
+            >
+              Software Mobile
+            </h3>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">
+              Aplicativos conectados ao seu negocio com boa experiencia e alta
+              confiabilidade.
+            </p>
+          </article>
+          <article
+            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 100ms"
+          >
+            <i
+              class="ph ph-desktop text-2xl text-emerald-600 dark:text-emerald-300"
+            ></i>
+            <h3
+              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
+            >
+              Software Desktop
+            </h3>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">
+              Aplicacoes para operacao interna com integrações e regras de
+              negocio complexas.
+            </p>
+          </article>
+          <article
+            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 140ms"
+          >
+            <i
+              class="ph ph-wrench text-2xl text-emerald-600 dark:text-emerald-300"
+            ></i>
+            <h3
+              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
+            >
+              Manutencao Evolutiva
+            </h3>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">
+              Melhorias continuas, correcoes e suporte tecnico para seu produto
+              crescer com seguranca.
+            </p>
+          </article>
+          <article
+            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 180ms"
+          >
+            <i
+              class="ph ph-plugs-connected text-2xl text-emerald-600 dark:text-emerald-300"
+            ></i>
+            <h3
+              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
+            >
+              Integracoes e APIs
+            </h3>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">
+              Conectamos sistemas, ERPs, CRMs e servicos externos para eliminar
+              retrabalho.
+            </p>
+          </article>
+          <article
+            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 220ms"
+          >
+            <i
+              class="ph ph-chalkboard-teacher text-2xl text-emerald-600 dark:text-emerald-300"
+            ></i>
+            <h3
+              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
+            >
+              Consultoria em Desenvolvimento
+            </h3>
+            <p class="mt-2 text-slate-700 dark:text-slate-300">
+              Apoio estrategico para arquitetura, processos de entrega e
+              qualidade de codigo.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        class="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10 md:px-8"
+      >
+        <div
+          class="reveal rounded-xl border border-emerald-100 bg-emerald-50/70 p-6 md:p-8 dark:border-emerald-900/40 dark:bg-emerald-950/20"
+          style="--reveal-delay: 50ms"
+        >
+          <h2
+            class="font-inter text-2xl font-bold text-slate-900 dark:text-white"
+          >
+            Como trabalhamos
+          </h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-3">
+            <div
+              class="rounded-lg border border-emerald-100 bg-white p-4 dark:border-emerald-900/40 dark:bg-slate-900/80"
+            >
+              <p class="font-inter text-lg font-semibold text-emerald-700">
+                1. Diagnostico
+              </p>
+              <p class="mt-1 text-slate-700 dark:text-slate-300">
+                Levantamos contexto tecnico, gargalos e oportunidades de ganho
+                rapido.
+              </p>
+            </div>
+            <div
+              class="rounded-lg border border-emerald-100 bg-white p-4 dark:border-emerald-900/40 dark:bg-slate-900/80"
+            >
+              <p class="font-inter text-lg font-semibold text-emerald-700">
+                2. Execucao
+              </p>
+              <p class="mt-1 text-slate-700 dark:text-slate-300">
+                Implementamos com transparencia, checkpoints frequentes e foco
+                em valor.
+              </p>
+            </div>
+            <div
+              class="rounded-lg border border-emerald-100 bg-white p-4 dark:border-emerald-900/40 dark:bg-slate-900/80"
+            >
+              <p class="font-inter text-lg font-semibold text-emerald-700">
+                3. Evolucao
+              </p>
+              <p class="mt-1 text-slate-700 dark:text-slate-300">
+                Mantemos e escalamos sua solucao com base em dados e metas de
+                negocio.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="projetos"
+        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
+      >
+        <div
+          class="reveal mb-8 flex items-end justify-between gap-4"
+          style="--reveal-delay: 40ms"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
+            >
+              Projetos feitos
+            </p>
+            <h2
+              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
+            >
+              Resultados entregues para clientes
+            </h2>
+          </div>
+        </div>
+
+        <div
+          id="projetos-grid"
+          class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+      </section>
+
+      <section
+        id="testemunhos"
+        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
+      >
+        <div
+          class="reveal mb-8 flex items-end justify-between gap-4"
+          style="--reveal-delay: 30ms"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
+            >
+              Testemunhos
+            </p>
+            <h2
+              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
+            >
+              O que nossos clientes dizem
+            </h2>
+          </div>
+        </div>
+
+        <div
+          id="testemunhos-grid"
+          class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
+        ></div>
+      </section>
+
+      <section
+        id="contato"
+        class="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 md:px-8 md:pb-20 md:pt-12"
+      >
+        <div
+          class="reveal grid gap-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 md:grid-cols-[1.2fr_0.8fr] md:p-8 dark:border-slate-800 dark:bg-slate-900"
+          style="--reveal-delay: 50ms"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
+            >
+              Vamos conversar
+            </p>
+            <h2
+              class="mt-1 font-inter text-3xl font-bold text-slate-900 dark:text-white"
+            >
+              Transforme desafios em entregas de tecnologia
+            </h2>
+            <p class="mt-3 max-w-2xl text-slate-700 dark:text-slate-300">
+              Conte para a Moveup Tecnologia LTDA o que sua empresa precisa:
+              novo produto digital, manutencao, integrações, automacao ou
+              consultoria. Retornamos com um plano tecnico claro.
+            </p>
+          </div>
+          <div
+            class="space-y-3 rounded-lg border border-emerald-100 bg-emerald-50 p-5 dark:border-emerald-900/40 dark:bg-emerald-950/30"
+          >
+            <p
+              class="font-inter text-lg font-semibold text-slate-900 dark:text-white"
+            >
+              Contato comercial
+            </p>
+            <a
+              class="block break-all rounded-lg bg-white px-4 py-3 text-slate-700 dark:bg-slate-900 dark:text-slate-200"
+              href="mailto:contato@moveuptecnologia.com.br"
+              >contato@moveuptecnologia.com.br</a
+            >
+            <a
+              class="block rounded-lg bg-white px-4 py-3 text-slate-700 dark:bg-slate-900 dark:text-slate-200"
+              href="tel:+5541999320954"
+              >(41) 99932-0954</a
+            >
+            <a
+              class="block rounded-lg bg-emerald-600 px-4 py-3 text-center font-medium text-white transition hover:bg-emerald-700"
+              href="https://wa.me/5541999320954"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Falar pelo WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="reveal border-t border-slate-200 bg-white/70 py-6 dark:border-slate-800 dark:bg-slate-900/70"
+      style="--reveal-delay: 0ms"
+    >
+      <div
+        class="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 text-sm text-slate-600 dark:text-slate-400 sm:px-6 md:flex-row md:items-center md:justify-between md:px-8"
+      >
+        <p>© 2026 Moveup Tecnologia LTDA. Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido por
+          <a
+            href="https://moveuptecnologia.com.br/"
+            class="font-medium text-emerald-700 hover:underline dark:text-emerald-300"
+            >Moveup Tecnologia LTDA</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <script src="/public/js/index.js"></script>
+    <script>
+      const themeToggle = document.getElementById("theme-toggle");
+      const headerShell = document.getElementById("header-shell");
+
+      const syncHeaderOnScroll = () => {
+        if (!headerShell) {
+          return;
+        }
+
+        const isScrolled = window.scrollY > 12;
+        headerShell.classList.toggle("py-3", !isScrolled);
+        headerShell.classList.toggle("py-2", isScrolled);
+        headerShell.classList.toggle("border-transparent", !isScrolled);
+        headerShell.classList.toggle("bg-transparent", !isScrolled);
+
+        headerShell.classList.toggle("border-slate-200", isScrolled);
+        headerShell.classList.toggle("bg-white/85", isScrolled);
+        headerShell.classList.toggle("backdrop-blur", isScrolled);
+        headerShell.classList.toggle("shadow-lg", isScrolled);
+        headerShell.classList.toggle("shadow-emerald-900/5", isScrolled);
+
+        headerShell.classList.toggle("dark:border-slate-800", isScrolled);
+        headerShell.classList.toggle("dark:bg-slate-900/80", isScrolled);
+      };
+
+      themeToggle?.addEventListener("click", () => {
+        const isDark = document.documentElement.classList.toggle("dark");
+        localStorage.setItem("moveup-theme", isDark ? "dark" : "light");
+      });
+
+      const revealElements = document.querySelectorAll(".reveal");
+      const observer = (window.__revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: "0px 0px -50px 0px",
+        },
+      ));
+
+      revealElements.forEach((element) => observer.observe(element));
+      syncHeaderOnScroll();
+      window.addEventListener("scroll", syncHeaderOnScroll, { passive: true });
+    </script>
+  </body>
+</html>
