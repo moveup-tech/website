@@ -102,10 +102,58 @@
         transform: translateY(0) scale(1);
       }
 
+      .faq-item {
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+
+      .faq-item:hover,
+      .faq-item[open] {
+        transform: translateY(-2px);
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+      }
+
+      .faq-item summary::-webkit-details-marker {
+        display: none;
+      }
+
+      .faq-item .faq-icon {
+        transition: transform 0.25s ease;
+      }
+
+      .faq-item[open] .faq-icon {
+        transform: rotate(45deg);
+      }
+
+      .faq-answer {
+        animation: faqSlide 0.28s ease;
+      }
+
+      @keyframes faqSlide {
+        from {
+          opacity: 0;
+          transform: translateY(-6px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
       @media (prefers-reduced-motion: reduce) {
         .reveal {
           opacity: 1;
           transform: none;
+          transition: none;
+        }
+
+        .faq-item,
+        .faq-item .faq-icon,
+        .faq-answer {
+          animation: none;
           transition: none;
         }
       }
@@ -117,7 +165,7 @@
         "@type": "Organization",
         "name": "Moveup Tecnologia LTDA",
         "url": "https://moveuptecnologia.com.br/",
-        "logo": "https://moveuptecnologia.com.br/assets/logo.png",
+        "logo": "https://moveuptecnologia.com.br/assets/logo-light.png",
         "description": "Empresa de prestacao de servicos de tecnologia com foco em desenvolvimento e manutencao de softwares, integrações, automacoes e consultoria.",
         "areaServed": "BR",
         "knowsAbout": [
@@ -160,9 +208,14 @@
           aria-label="Ir para o topo"
         >
           <img
-            src="/assets/logo.svg"
+            src="/assets/logo-dark.svg"
             alt="Logo da Moveup Tecnologia LTDA"
-            class="h-6 w-auto transition-transform group-hover:scale-105"
+            class="h-6 w-auto transition-transform group-hover:scale-105 dark:hidden"
+          />
+          <img
+            src="/assets/logo-light.svg"
+            alt="Logo da Moveup Tecnologia LTDA"
+            class="hidden h-6 w-auto transition-transform group-hover:scale-105 dark:block"
           />
         </a>
         <div class="flex items-center gap-3">
@@ -532,6 +585,115 @@
           id="testemunhos-grid"
           class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
         ></div>
+      </section>
+
+      <section
+        id="faq"
+        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
+      >
+        <div
+          class="reveal mb-8 flex items-end justify-between gap-4"
+          style="--reveal-delay: 30ms"
+        >
+          <div>
+            <p
+              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
+            >
+              Perguntas frequentes
+            </p>
+            <h2
+              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
+            >
+              Dúvidas comuns antes de começar
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <details
+            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 40ms"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
+            >
+              Que tipo de projeto a Moveup desenvolve?
+              <i
+                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
+              ></i>
+            </summary>
+            <p
+              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
+            >
+              Desenvolvemos softwares web, mobile e desktop, além de
+              integrações, automações, APIs e melhorias em sistemas já
+              existentes.
+            </p>
+          </details>
+
+          <details
+            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 80ms"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
+            >
+              Vocês também fazem manutenção?
+              <i
+                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
+              ></i>
+            </summary>
+            <p
+              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
+            >
+              Sim. Atuamos com manutenção corretiva e evolutiva, incluindo
+              correções, novas funcionalidades, ajustes de performance e suporte
+              técnico contínuo.
+            </p>
+          </details>
+
+          <details
+            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 120ms"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
+            >
+              Como funciona o início de um projeto?
+              <i
+                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
+              ></i>
+            </summary>
+            <p
+              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
+            >
+              Começamos com um diagnóstico para entender objetivos, cenário
+              técnico e prioridades. Depois disso, estruturamos escopo,
+              estimativa e próximos passos.
+            </p>
+          </details>
+
+          <details
+            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
+            style="--reveal-delay: 160ms"
+          >
+            <summary
+              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
+            >
+              É possível integrar sistemas que já usamos?
+              <i
+                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
+              ></i>
+            </summary>
+            <p
+              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
+            >
+              Sim. Conectamos sistemas internos, ERPs, CRMs, ferramentas de
+              pagamento, serviços externos e APIs para automatizar fluxos e
+              reduzir tarefas manuais.
+            </p>
+          </details>
+        </div>
       </section>
 
       <section

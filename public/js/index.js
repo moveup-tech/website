@@ -2,9 +2,9 @@
 
 const projetos = [
   {
-    imagem: "/assets/cover.png",
+    imagem: "/assets/covers/active-track.png",
     alt: "Tela do aplicativo de patrulhamento e monitoramento",
-    titulo: "Aplicativo para gestão de patrulhas e vigilância",
+    titulo: "Active Track - Aplicativo para gestão de patrulhas e vigilância",
     descricao:
       "Desenvolvemos um aplicativo mobile para registro de rondas, envio de ocorrências, eventos SOS e monitoramento em tempo real de equipes de segurança.",
     stack: "React Native, Expo, Node.js, PostgreSQL, WebSocket",
@@ -12,39 +12,9 @@ const projetos = [
       "Maior rastreabilidade das operações e redução do tempo de resposta a incidentes.",
   },
   {
-    imagem: "/assets/cover.png",
-    alt: "Plataforma de aluguel de motocicletas",
-    titulo: "Sistema de locação e assinatura de motocicletas",
-    descricao:
-      "Criamos uma plataforma completa para gerenciamento de contratos, validação de documentos e administração de planos de aluguel de motos.",
-    stack: "React, Node.js, Prisma ORM, PostgreSQL",
-    resultado:
-      "Automação do processo de locação e redução significativa de tarefas operacionais.",
-  },
-  {
-    imagem: "/assets/cover.png",
-    alt: "Dashboard com indicadores de vendas e estoque",
-    titulo: "Business Intelligence para distribuidora de pneus",
-    descricao:
-      "Implementamos uma solução de BI integrada ao ERP para acompanhamento de vendas, estoque e desempenho comercial em tempo real.",
-    stack: "Power BI, PostgreSQL, API REST, ETL",
-    resultado:
-      "Melhor visibilidade dos indicadores estratégicos e apoio à tomada de decisão.",
-  },
-  {
-    imagem: "/assets/cover.png",
-    alt: "Painel de notificações corporativas",
-    titulo: "Microserviço de notificações corporativas",
-    descricao:
-      "Desenvolvemos uma plataforma centralizada para envio de notificações por e-mail e canais em tempo real, com processamento assíncrono e integração via webhooks.",
-    stack: "Node.js, TypeScript, MongoDB, Agenda, WebSocket",
-    resultado:
-      "Maior confiabilidade na entrega de mensagens e padronização das comunicações entre sistemas.",
-  },
-  {
-    imagem: "/assets/cover.png",
+    imagem: "/assets/covers/active-track.png",
     alt: "Plataforma de streaming ao vivo",
-    titulo: "Infraestrutura de streaming para transmissões ao vivo",
+    titulo: "Infraestrutura de streaming para transmissões ao vivo através do celular",
     descricao:
       "Projetamos uma arquitetura escalável para transmissões em tempo real com autenticação de usuários, gerenciamento de sessões e distribuição de conteúdo.",
     stack: "Nginx RTMP, Node.js, PostgreSQL, Docker",
@@ -52,15 +22,15 @@ const projetos = [
       "Suporte a transmissões simultâneas com alta disponibilidade e baixa latência.",
   },
   {
-    imagem: "/assets/cover.png",
-    alt: "Sistema de integração entre aplicações",
-    titulo: "Plataforma de integrações e automação de processos",
+    imagem: "/assets/covers/blue-moto-rent.png",
+    alt: "Plataforma de aluguel de motocicletas",
+    titulo: "Blue Moto Rent -Sistema de locação e assinatura de motocicletas",
     descricao:
-      "Criamos integrações entre sistemas corporativos para automatizar fluxos operacionais, sincronizar dados e reduzir atividades manuais.",
-    stack: "Node.js, TypeScript, APIs REST, PostgreSQL",
+      "Criamos uma plataforma completa para gerenciamento de contratos, validação de documentos e administração de planos de aluguel de motos.",
+    stack: "React, Node.js, Prisma ORM, PostgreSQL",
     resultado:
-      "Redução de erros operacionais e aumento da produtividade das equipes.",
-  },
+      "Automação do processo de locação e redução significativa de tarefas operacionais.",
+  }
 ];
 
 const testemunhos = [
