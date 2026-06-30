@@ -1,926 +1,632 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moveup Tecnologia | Impulsionando o futuro.</title>
-    <meta
-      name="description"
-      content="A Moveup Tecnologia desenvolve e mantém softwares web, mobile e desktop, além de integrações, automações e consultoria especializada em desenvolvimento."
-    />
-    <meta
-      name="keywords"
-      content="Moveup Tecnologia, desenvolvimento de software, software web, software mobile, software desktop, integrações, automações, consultoria em desenvolvimento"
-    />
-    <meta name="author" content="Moveup Tecnologia" />
-    <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://moveuptecnologia.com.br/" />
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moveup Tecnologia | Impulsionando o futuro.</title>
+  <meta name="description" content="A Moveup Tecnologia desenvolve softwares, aplicativos, sistemas web, integrações, automações e consultoria técnica para pequenas e médias empresas.">
+  <meta name="keywords" content="Moveup Tecnologia, desenvolvimento de software, software sob medida, aplicativos mobile, sistemas web, integrações, APIs, automações, consultoria em desenvolvimento, PMEs">
+  <meta name="author" content="Moveup Tecnologia">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E1210">
+  <link rel="canonical" href="https://moveuptecnologia.com.br/">
 
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Moveup Tecnologia" />
-    <meta
-      property="og:title"
-      content="Moveup Tecnologia | Impulsionando o futuro."
-    />
-    <meta
-      property="og:description"
-      content="Parceira em desenvolvimento e manutenção de softwares web, mobile e desktop, integrações, automações e consultoria técnica."
-    />
-    <meta property="og:url" content="https://moveuptecnologia.com.br/" />
-    <meta
-      property="og:image"
-      content="https://moveuptecnologia.com.br/public/og-image.jpg"
-    />
-    <meta
-      property="og:image:secure_url"
-      content="https://moveuptecnologia.com.br/public/og-image.jpg"
-    />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:image:alt"
-      content="Moveup Tecnologia | Impulsionando o futuro."
-    />
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Moveup Tecnologia">
+  <meta property="og:title" content="Moveup Tecnologia | Impulsionando o futuro.">
+  <meta property="og:description" content="Software sob medida, apps, sistemas web, integrações, automações e consultoria técnica para acelerar sua operação.">
+  <meta property="og:url" content="https://moveuptecnologia.com.br/">
+  <meta property="og:image" content="https://moveuptecnologia.com.br/public/og-image.jpg">
+  <meta property="og:image:secure_url" content="https://moveuptecnologia.com.br/public/og-image.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Moveup Tecnologia | Impulsionando o futuro.">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Moveup Tecnologia | Impulsionando o futuro."
-    />
-    <meta
-      name="twitter:description"
-      content="Software sob medida, automações, integrações e consultoria para acelerar sua operação."
-    />
-    <meta
-      name="twitter:image"
-      content="https://moveuptecnologia.com.br/public/og-image.jpg"
-    />
-    <meta
-      name="twitter:image:alt"
-      content="Moveup Tecnologia | Impulsionando o futuro."
-    />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Moveup Tecnologia | Impulsionando o futuro.">
+  <meta name="twitter:description" content="Software sob medida, automações, integrações e consultoria para acelerar sua operação.">
+  <meta name="twitter:image" content="https://moveuptecnologia.com.br/public/og-image.jpg">
+  <meta name="twitter:image:alt" content="Moveup Tecnologia | Impulsionando o futuro.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700;800&family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="/public/favicon.png" type="image/png" />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            fontFamily: {
-              inter: ["Inter", "sans-serif"],
-              roboto: ["Roboto", "sans-serif"],
-            },
+  <link rel="shortcut icon" href="/public/favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coal: '#0E1210',
+            moss: '#141A17',
+            panel: '#1A211D',
+            line: '#2A332C',
+            softline: '#232B26',
+            ink: '#ECEFEA',
+            muted: '#A8B2A9',
+            faint: '#6E7A70',
+            signal: '#7CF29C',
+            greenDim: '#4F9A66',
+            amber: '#F2C879'
           },
-        },
-      };
-    </script>
-    <script>
-      (function () {
-        const storedTheme = localStorage.getItem("moveup-theme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)",
-        ).matches;
-        if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
-          document.documentElement.classList.add("dark");
-        }
-      })();
-    </script>
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-
-      .reveal {
-        opacity: 0;
-        transform: translateY(20px) scale(0.985);
-        transition:
-          opacity 0.7s ease,
-          transform 0.7s ease;
-        transition-delay: var(--reveal-delay, 0ms);
-      }
-
-      .reveal.is-visible {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-      }
-
-      .faq-item {
-        transition:
-          transform 0.25s ease,
-          border-color 0.25s ease,
-          box-shadow 0.25s ease;
-      }
-
-      .faq-item:hover,
-      .faq-item[open] {
-        transform: translateY(-2px);
-        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-      }
-
-      .faq-item summary::-webkit-details-marker {
-        display: none;
-      }
-
-      .faq-item .faq-icon {
-        transition: transform 0.25s ease;
-      }
-
-      .faq-item[open] .faq-icon {
-        transform: rotate(45deg);
-      }
-
-      .faq-answer {
-        animation: faqSlide 0.28s ease;
-      }
-
-      @keyframes faqSlide {
-        from {
-          opacity: 0;
-          transform: translateY(-6px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+            serif: ['Fraunces', 'serif'],
+            mono: ['JetBrains Mono', 'monospace']
+          },
+          boxShadow: {
+            glow: '0 20px 80px rgba(124,242,156,.14)',
+            edge: '0 1px 0 rgba(255,255,255,.05) inset'
+          }
         }
       }
-
-      @media (prefers-reduced-motion: reduce) {
-        .reveal {
-          opacity: 1;
-          transform: none;
-          transition: none;
-        }
-
-        .faq-item,
-        .faq-item .faq-icon,
-        .faq-answer {
-          animation: none;
-          transition: none;
-        }
+    };
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background: #0E1210;
+      color: #ECEFEA;
+      -webkit-font-smoothing: antialiased;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      background:
+        radial-gradient(circle at 18% 12%, rgba(124, 242, 156, .12), transparent 28%),
+        radial-gradient(circle at 82% 8%, rgba(242, 200, 121, .08), transparent 28%),
+        linear-gradient(#232B26 1px, transparent 1px),
+        linear-gradient(90deg, #232B26 1px, transparent 1px),
+        #0E1210;
+      background-size: auto, auto, 64px 64px, 64px 64px, auto;
+      mask-image: radial-gradient(ellipse 85% 65% at 50% 0%, black 45%, transparent 100%);
+      opacity: .88;
+      pointer-events: none;
+    }
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(115deg, transparent 0%, rgba(124, 242, 156, .05) 45%, transparent 65%);
+      transform: translateX(-70%);
+      animation: sheen 12s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .pulse-dot {
+      animation: pulseDot 1.8s ease-in-out infinite;
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(124,242,156,.45); }
+      50% { opacity: .55; box-shadow: 0 0 0 8px rgba(124,242,156,0); }
+    }
+    @keyframes sheen {
+      0%, 72%, 100% { transform: translateX(-70%); }
+      86% { transform: translateX(70%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
       }
-    </style>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Moveup Tecnologia",
-        "url": "https://moveuptecnologia.com.br/",
-        "logo": "https://moveuptecnologia.com.br/assets/logo-light.png",
-        "description": "Empresa de prestação de serviços de tecnologia com foco em desenvolvimento e manutenção de softwares, integrações, automações e consultoria.",
-        "areaServed": "BR",
-        "knowsAbout": [
-          "Desenvolvimento web",
-          "Desenvolvimento mobile",
-          "Desenvolvimento desktop",
-          "Integrações de sistemas",
-          "Automação de processos",
-          "Consultoria de desenvolvimento"
-        ]
-      }
-    </script>
-  </head>
-  <body
-    class="bg-slate-50 font-roboto text-slate-800 antialiased transition-colors dark:bg-slate-950 dark:text-slate-200"
-  >
-    <div
-      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_15%,rgba(16,185,129,0.25),transparent_40%),radial-gradient(circle_at_85%_0%,rgba(20,184,166,0.2),transparent_36%),linear-gradient(to_bottom,rgba(236,253,245,0.8),rgba(248,250,252,1))] dark:bg-[radial-gradient(circle_at_15%_20%,rgba(16,185,129,0.2),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(5,150,105,0.15),transparent_40%),linear-gradient(to_bottom,rgba(2,6,23,1),rgba(15,23,42,1))]"
-      aria-hidden="true"
-    ></div>
-    <div
-      class="pointer-events-none fixed inset-0 -z-10 opacity-30 dark:opacity-20"
-      style="
-        background-image:
-          linear-gradient(rgba(16, 185, 129, 0.12) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(16, 185, 129, 0.12) 1px, transparent 1px);
-        background-size: 38px 38px;
-      "
-      aria-hidden="true"
-    ></div>
-
-    <header id="site-header" class="fixed inset-x-0 top-0 z-50">
-      <div
-        id="header-shell"
-        class="mx-auto mt-3 flex w-[calc(100%-1.5rem)] max-w-6xl items-center justify-between rounded-xl border border-transparent bg-transparent px-4 py-3 transition-all duration-300 sm:mt-4 sm:w-[calc(100%-2rem)] sm:px-6 md:px-8"
-      >
-        <a
-          href="#inicio"
-          class="group inline-flex items-center gap-2"
-          aria-label="Ir para o topo"
-        >
-          <img
-            src="/assets/logo-dark.svg"
-            alt="Logo da Moveup Tecnologia"
-            class="h-16 w-auto transition-transform group-hover:scale-105 sm:h-20 dark:hidden"
-          />
-          <img
-            src="/assets/logo-light.svg"
-            alt="Logo da Moveup Tecnologia"
-            class="hidden h-16 w-auto transition-transform group-hover:scale-105 sm:h-20 dark:block"
-          />
-        </a>
-        <div class="flex items-center gap-3">
-          <button
-            id="theme-toggle"
-            type="button"
-            class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-300 bg-white/80 text-slate-700 transition hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-200 dark:hover:border-emerald-500"
-            aria-label="Alternar tema"
-          >
-            <i class="ph ph-moon-stars text-xl dark:hidden"></i>
-            <i class="ph ph-sun text-xl hidden dark:block"></i>
-          </button>
-          <a
-            href="#contato"
-            class="inline-flex items-center gap-2 rounded-lg border border-emerald-600 px-3 py-2 text-sm font-medium text-emerald-700 transition hover:bg-emerald-600 hover:text-white dark:border-emerald-500 dark:text-emerald-300 dark:hover:text-white sm:px-4"
-          >
-            <i class="ph ph-chat-circle-dots text-base sm:hidden"></i>
-            <span class="hidden sm:inline">Fale com a gente</span>
-          </a>
-        </div>
-      </div>
-    </header>
-
-    <main id="inicio" class="pt-20 sm:pt-24 md:pt-28 lg:pt-32">
-      <section
-        class="mx-auto grid w-full max-w-6xl gap-8 px-4 pb-12 pt-6 sm:px-6 md:grid-cols-2 md:px-8 md:pb-24"
-      >
-        <div class="reveal space-y-6" style="--reveal-delay: 50ms">
-          <p
-            class="inline-flex items-center gap-2 rounded-lg bg-emerald-100 px-3 py-1 text-sm font-medium text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300"
-          >
-            <i class="ph ph-cpu text-base"></i>
-            Solucoes sob medida em tecnologia
-          </p>
-          <h1
-            class="font-inter text-3xl font-extrabold leading-tight text-slate-900 dark:text-white sm:text-4xl md:text-5xl"
-          >
-            Desenvolvimento, integrações e automacoes para levar seu negocio
-            mais longe
-          </h1>
-          <p
-            class="max-w-xl text-lg leading-relaxed text-slate-700 dark:text-slate-300"
-          >
-            A Moveup Tecnologia ajuda empresas a evoluirem com produtos
-            digitais robustos, manutencao continua e consultoria especializada
-            para ciclos de entrega mais rapidos e previsiveis.
-          </p>
-          <div class="flex flex-wrap gap-3">
-            <a
-              href="#servicos"
-              class="inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-5 py-3 font-medium text-white shadow-sm transition hover:bg-emerald-700"
-              ><i class="ph ph-arrow-down text-lg"></i> Saber mais</a
-            >
-            <a
-              href="#contato"
-              class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-5 py-3 font-medium text-slate-700 transition hover:border-emerald-500 hover:text-emerald-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:border-emerald-500 dark:hover:text-emerald-300"
-              ><i class="ph ph-chat-circle-dots text-lg"></i> Contato</a
-            >
-          </div>
-          <div
-            class="reveal grid max-w-md grid-cols-3 gap-3 pt-2 text-center"
-            style="--reveal-delay: 150ms"
-          >
-            <div
-              class="rounded-lg border border-emerald-100 bg-white p-3 dark:border-emerald-900/40 dark:bg-slate-900/80"
-            >
-              <p class="font-inter text-2xl font-bold text-emerald-700">Web</p>
-              <p class="text-sm text-slate-600 dark:text-slate-400">
-                Aplicacoes
-              </p>
-            </div>
-            <div
-              class="rounded-lg border border-emerald-100 bg-white p-3 dark:border-emerald-900/40 dark:bg-slate-900/80"
-            >
-              <p class="font-inter text-2xl font-bold text-emerald-700">
-                Mobile
-              </p>
-              <p class="text-sm text-slate-600 dark:text-slate-400">
-                iOS e Android
-              </p>
-            </div>
-            <div
-              class="rounded-lg border border-emerald-100 bg-white p-3 dark:border-emerald-900/40 dark:bg-slate-900/80"
-            >
-              <p class="font-inter text-2xl font-bold text-emerald-700">
-                Desktop
-              </p>
-              <p class="text-sm text-slate-600 dark:text-slate-400">
-                Sistemas internos
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <aside
-          class="reveal overflow-hidden rounded-xl border border-emerald-100 bg-white/85 p-6 shadow-sm backdrop-blur dark:border-emerald-900/40 dark:bg-slate-900/70"
-          style="--reveal-delay: 120ms"
-        >
-          <img
-            src="https://images.unsplash.com/photo-1593720213428-28a5b9e94613?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Ambiente com placa de circuito e componentes tecnologicos"
-            class="h-48 w-full rounded-lg object-cover"
-            loading="lazy"
-          />
-          <h2
-            class="mt-5 font-inter text-2xl font-bold text-slate-900 dark:text-white"
-          >
-            O que entregamos
-          </h2>
-          <p class="mt-3 text-slate-700 dark:text-slate-300">
-            Time tecnico para construir, integrar e evoluir software com foco em
-            performance, seguranca e escala.
-          </p>
-          <ul class="mt-5 space-y-3 text-slate-700 dark:text-slate-300">
-            <li
-              class="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30"
-            >
-              <i class="ph ph-code text-emerald-700 dark:text-emerald-300"></i
-              >Desenvolvimento sob demanda
-            </li>
-            <li
-              class="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30"
-            >
-              <i class="ph ph-plugs text-emerald-700 dark:text-emerald-300"></i
-              >Integracoes com APIs e plataformas
-            </li>
-            <li
-              class="flex items-center gap-2 rounded-lg bg-emerald-50 p-3 dark:bg-emerald-950/30"
-            >
-              <i
-                class="ph ph-gear-six text-emerald-700 dark:text-emerald-300"
-              ></i
-              >Automacao de processos
-            </li>
-          </ul>
-        </aside>
-      </section>
-
-      <section
-        id="servicos"
-        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
-      >
-        <div
-          class="reveal mb-8 flex items-end justify-between gap-4"
-          style="--reveal-delay: 40ms"
-        >
-          <div>
-            <p
-              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
-            >
-              Servicos principais
-            </p>
-            <h2
-              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
-            >
-              Tecnologia aplicada ao resultado
-            </h2>
-          </div>
-        </div>
-        <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          <article
-            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 20ms"
-          >
-            <i
-              class="ph ph-globe text-2xl text-emerald-600 dark:text-emerald-300"
-            ></i>
-            <h3
-              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Software Web
-            </h3>
-            <p class="mt-2 text-slate-700 dark:text-slate-300">
-              Plataformas, paineis e portais com foco em usabilidade e
-              produtividade.
-            </p>
-          </article>
-          <article
-            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 60ms"
-          >
-            <i
-              class="ph ph-device-mobile text-2xl text-emerald-600 dark:text-emerald-300"
-            ></i>
-            <h3
-              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Software Mobile
-            </h3>
-            <p class="mt-2 text-slate-700 dark:text-slate-300">
-              Aplicativos conectados ao seu negocio com boa experiencia e alta
-              confiabilidade.
-            </p>
-          </article>
-          <article
-            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 100ms"
-          >
-            <i
-              class="ph ph-desktop text-2xl text-emerald-600 dark:text-emerald-300"
-            ></i>
-            <h3
-              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Software Desktop
-            </h3>
-            <p class="mt-2 text-slate-700 dark:text-slate-300">
-              Aplicacoes para operacao interna com integrações e regras de
-              negocio complexas.
-            </p>
-          </article>
-          <article
-            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 140ms"
-          >
-            <i
-              class="ph ph-wrench text-2xl text-emerald-600 dark:text-emerald-300"
-            ></i>
-            <h3
-              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Manutencao Evolutiva
-            </h3>
-            <p class="mt-2 text-slate-700 dark:text-slate-300">
-              Melhorias continuas, correcoes e suporte tecnico para seu produto
-              crescer com seguranca.
-            </p>
-          </article>
-          <article
-            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 180ms"
-          >
-            <i
-              class="ph ph-plugs-connected text-2xl text-emerald-600 dark:text-emerald-300"
-            ></i>
-            <h3
-              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Integracoes e APIs
-            </h3>
-            <p class="mt-2 text-slate-700 dark:text-slate-300">
-              Conectamos sistemas, ERPs, CRMs e servicos externos para eliminar
-              retrabalho.
-            </p>
-          </article>
-          <article
-            class="reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 220ms"
-          >
-            <i
-              class="ph ph-chalkboard-teacher text-2xl text-emerald-600 dark:text-emerald-300"
-            ></i>
-            <h3
-              class="mt-3 font-inter text-xl font-semibold text-slate-900 dark:text-white"
-            >
-              Consultoria em Desenvolvimento
-            </h3>
-            <p class="mt-2 text-slate-700 dark:text-slate-300">
-              Apoio estrategico para arquitetura, processos de entrega e
-              qualidade de codigo.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section
-        class="mx-auto w-full max-w-6xl px-4 py-8 sm:px-6 sm:py-10 md:px-8"
-      >
-        <div
-          class="reveal rounded-xl border border-emerald-100 bg-emerald-50/70 p-6 md:p-8 dark:border-emerald-900/40 dark:bg-emerald-950/20"
-          style="--reveal-delay: 50ms"
-        >
-          <h2
-            class="font-inter text-2xl font-bold text-slate-900 dark:text-white"
-          >
-            Como trabalhamos
-          </h2>
-          <div class="mt-5 grid gap-4 md:grid-cols-3">
-            <div
-              class="rounded-lg border border-emerald-100 bg-white p-4 dark:border-emerald-900/40 dark:bg-slate-900/80"
-            >
-              <p class="font-inter text-lg font-semibold text-emerald-700">
-                1. Diagnostico
-              </p>
-              <p class="mt-1 text-slate-700 dark:text-slate-300">
-                Levantamos contexto tecnico, gargalos e oportunidades de ganho
-                rapido.
-              </p>
-            </div>
-            <div
-              class="rounded-lg border border-emerald-100 bg-white p-4 dark:border-emerald-900/40 dark:bg-slate-900/80"
-            >
-              <p class="font-inter text-lg font-semibold text-emerald-700">
-                2. Execucao
-              </p>
-              <p class="mt-1 text-slate-700 dark:text-slate-300">
-                Implementamos com transparencia, checkpoints frequentes e foco
-                em valor.
-              </p>
-            </div>
-            <div
-              class="rounded-lg border border-emerald-100 bg-white p-4 dark:border-emerald-900/40 dark:bg-slate-900/80"
-            >
-              <p class="font-inter text-lg font-semibold text-emerald-700">
-                3. Evolucao
-              </p>
-              <p class="mt-1 text-slate-700 dark:text-slate-300">
-                Mantemos e escalamos sua solucao com base em dados e metas de
-                negocio.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="projetos"
-        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
-      >
-        <div
-          class="reveal mb-8 flex items-end justify-between gap-4"
-          style="--reveal-delay: 40ms"
-        >
-          <div>
-            <p
-              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
-            >
-              Projetos feitos
-            </p>
-            <h2
-              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
-            >
-              Resultados entregues para clientes
-            </h2>
-          </div>
-        </div>
-
-        <div
-          id="projetos-grid"
-          class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
-        ></div>
-      </section>
-
-      <section
-        id="testemunhos"
-        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
-      >
-        <div
-          class="reveal mb-8 flex items-end justify-between gap-4"
-          style="--reveal-delay: 30ms"
-        >
-          <div>
-            <p
-              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
-            >
-              Testemunhos
-            </p>
-            <h2
-              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
-            >
-              O que nossos clientes dizem
-            </h2>
-          </div>
-        </div>
-
-        <div
-          id="testemunhos-grid"
-          class="grid gap-5 md:grid-cols-2 lg:grid-cols-3"
-        ></div>
-      </section>
-
-      <section
-        id="faq"
-        class="mx-auto w-full max-w-6xl px-4 py-10 sm:px-6 sm:py-12 md:px-8 md:py-14"
-      >
-        <div
-          class="reveal mb-8 flex items-end justify-between gap-4"
-          style="--reveal-delay: 30ms"
-        >
-          <div>
-            <p
-              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
-            >
-              Perguntas frequentes
-            </p>
-            <h2
-              class="font-inter text-3xl font-bold text-slate-900 dark:text-white"
-            >
-              Dúvidas comuns antes de começar
-            </h2>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <details
-            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 40ms"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
-            >
-              Que tipo de projeto a Moveup desenvolve?
-              <i
-                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
-              ></i>
-            </summary>
-            <p
-              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
-            >
-              Desenvolvemos softwares web, mobile e desktop, além de
-              integrações, automações, APIs e melhorias em sistemas já
-              existentes.
-            </p>
-          </details>
-
-          <details
-            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 80ms"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
-            >
-              Vocês também fazem manutenção?
-              <i
-                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
-              ></i>
-            </summary>
-            <p
-              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
-            >
-              Sim. Atuamos com manutenção corretiva e evolutiva, incluindo
-              correções, novas funcionalidades, ajustes de performance e suporte
-              técnico contínuo.
-            </p>
-          </details>
-
-          <details
-            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 120ms"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
-            >
-              Como funciona o início de um projeto?
-              <i
-                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
-              ></i>
-            </summary>
-            <p
-              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
-            >
-              Começamos com um diagnóstico para entender objetivos, cenário
-              técnico e prioridades. Depois disso, estruturamos escopo,
-              estimativa e próximos passos.
-            </p>
-          </details>
-
-          <details
-            class="faq-item reveal rounded-xl border border-slate-200 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900"
-            style="--reveal-delay: 160ms"
-          >
-            <summary
-              class="flex cursor-pointer list-none items-center justify-between gap-4 font-inter text-lg font-semibold text-slate-900 dark:text-white"
-            >
-              É possível integrar sistemas que já usamos?
-              <i
-                class="faq-icon ph ph-plus-circle shrink-0 text-2xl text-emerald-600 dark:text-emerald-300"
-              ></i>
-            </summary>
-            <p
-              class="faq-answer mt-4 border-t border-slate-200 pt-4 text-slate-700 dark:border-slate-800 dark:text-slate-300"
-            >
-              Sim. Conectamos sistemas internos, ERPs, CRMs, ferramentas de
-              pagamento, serviços externos e APIs para automatizar fluxos e
-              reduzir tarefas manuais.
-            </p>
-          </details>
-        </div>
-      </section>
-
-      <section
-        id="contato"
-        class="mx-auto w-full max-w-6xl px-4 pb-16 pt-10 sm:px-6 md:px-8 md:pb-20 md:pt-12"
-      >
-        <div
-          class="reveal grid gap-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6 md:grid-cols-[1.2fr_0.8fr] md:p-8 dark:border-slate-800 dark:bg-slate-900"
-          style="--reveal-delay: 50ms"
-        >
-          <div>
-            <p
-              class="text-sm font-medium uppercase tracking-wide text-emerald-700 dark:text-emerald-300"
-            >
-              Vamos conversar
-            </p>
-            <h2
-              class="mt-1 font-inter text-3xl font-bold text-slate-900 dark:text-white"
-            >
-              Transforme desafios em entregas de tecnologia
-            </h2>
-            <p class="mt-3 max-w-2xl text-slate-700 dark:text-slate-300">
-              Conte para a Moveup Tecnologia o que sua empresa precisa:
-              novo produto digital, manutencao, integrações, automacao ou
-              consultoria. Retornamos com um plano tecnico claro.
-            </p>
-          </div>
-          <div
-            class="space-y-3 rounded-lg border border-emerald-100 bg-emerald-50 p-5 dark:border-emerald-900/40 dark:bg-emerald-950/30"
-          >
-            <p
-              class="font-inter text-lg font-semibold text-slate-900 dark:text-white"
-            >
-              Contato comercial
-            </p>
-            <a
-              class="block break-all rounded-lg bg-white px-4 py-3 text-slate-700 dark:bg-slate-900 dark:text-slate-200"
-              href="mailto:contato@moveuptecnologia.com.br"
-              >contato@moveuptecnologia.com.br</a
-            >
-            <a
-              class="block rounded-lg bg-white px-4 py-3 text-slate-700 dark:bg-slate-900 dark:text-slate-200"
-              href="tel:+5541999320954"
-              >(41) 99932-0954</a
-            >
-            <a
-              class="block rounded-lg bg-emerald-600 px-4 py-3 text-center font-medium text-white transition hover:bg-emerald-700"
-              href="https://wa.me/5541999320954"
-              target="_blank"
-              rel="noopener noreferrer"
-              >Falar pelo WhatsApp</a
-            >
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer
-      class="reveal border-t border-slate-800 bg-slate-950 text-slate-300"
-      style="--reveal-delay: 0ms"
-    >
-      <div
-        class="mx-auto grid w-full max-w-6xl gap-10 px-4 py-10 sm:px-6 md:grid-cols-[1.1fr_0.9fr_0.8fr] md:px-8 md:py-12"
-      >
-        <div>
-          <a
-            href="#inicio"
-            class="inline-flex items-center"
-            aria-label="Ir para o topo"
-          >
-            <img
-              src="/assets/logo-light.svg"
-              alt="Moveup Tecnologia"
-              class="h-16 w-auto"
-            />
-          </a>
-          <p class="mt-5 max-w-sm text-sm leading-6 text-slate-400">
-            Desenvolvimento, manutenção e evolução de software para empresas
-            que precisam transformar operação em produto digital confiável.
-          </p>
-        </div>
-
-        <div>
-          <h2
-            class="font-inter text-sm font-semibold uppercase tracking-wide text-white"
-          >
-            Contato
-          </h2>
-          <address class="mt-5 space-y-3 not-italic">
-            <a
-              href="mailto:contato@moveuptecnologia.com.br"
-              class="flex items-center gap-3 text-sm text-slate-300 transition hover:text-white"
-            >
-              <i class="ph ph-envelope-simple text-lg text-emerald-300"></i>
-              <span class="break-all">contato@moveuptecnologia.com.br</span>
-            </a>
-            <a
-              href="https://wa.me/5541999320954"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-3 text-sm text-slate-300 transition hover:text-white"
-            >
-              <i class="ph ph-whatsapp-logo text-lg text-emerald-300"></i>
-              <span>(41) 99932-0954</span>
-            </a>
-          </address>
-        </div>
-
-        <div>
-          <h2
-            class="font-inter text-sm font-semibold uppercase tracking-wide text-white"
-          >
-            Canais
-          </h2>
-          <nav class="mt-5 grid gap-3" aria-label="Redes sociais">
-            <a
-              href="https://www.instagram.com/moveup.tech"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-between border-b border-white/10 pb-3 text-sm text-slate-300 transition hover:border-emerald-300 hover:text-white"
-            >
-              <span class="flex items-center gap-3">
-                <i class="ph ph-instagram-logo text-lg text-emerald-300"></i>
-                Instagram
-              </span>
-              <span class="text-slate-500">@moveup.tech</span>
-            </a>
-            <a
-              href="https://twitter.com/moveuptecnologia"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-between border-b border-white/10 pb-3 text-sm text-slate-300 transition hover:border-emerald-300 hover:text-white"
-            >
-              <span class="flex items-center gap-3">
-                <i class="ph ph-x-logo text-lg text-emerald-300"></i>
-                Twitter
-              </span>
-              <span class="text-slate-500">@moveuptecnologia</span>
-            </a>
-            <a
-              href="https://www.linkedin.com/company/moveuptech"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-between border-b border-white/10 pb-3 text-sm text-slate-300 transition hover:border-emerald-300 hover:text-white"
-            >
-              <span class="flex items-center gap-3">
-                <i class="ph ph-linkedin-logo text-lg text-emerald-300"></i>
-                LinkedIn
-              </span>
-              <span class="text-slate-500">moveuptech</span>
-            </a>
-          </nav>
-        </div>
-      </div>
-
-      <div class="border-t border-white/10">
-        <div
-          class="mx-auto flex w-full max-w-6xl flex-col gap-2 px-4 py-5 text-xs text-slate-500 sm:px-6 md:flex-row md:items-center md:justify-between md:px-8"
-        >
-          <p>© 2026 Moveup Tecnologia. Todos os direitos reservados.</p>
-          <p>Software sob medida, integrações e consultoria técnica.</p>
-        </div>
-      </div>
-    </footer>
-    <script src="/public/js/index.js"></script>
-    <script>
-      const themeToggle = document.getElementById("theme-toggle");
-      const headerShell = document.getElementById("header-shell");
-
-      const syncHeaderOnScroll = () => {
-        if (!headerShell) {
-          return;
-        }
-
-        const isScrolled = window.scrollY > 12;
-        headerShell.classList.toggle("py-3", !isScrolled);
-        headerShell.classList.toggle("py-2", isScrolled);
-        headerShell.classList.toggle("border-transparent", !isScrolled);
-        headerShell.classList.toggle("bg-transparent", !isScrolled);
-
-        headerShell.classList.toggle("border-slate-200", isScrolled);
-        headerShell.classList.toggle("bg-white/85", isScrolled);
-        headerShell.classList.toggle("backdrop-blur", isScrolled);
-        headerShell.classList.toggle("shadow-lg", isScrolled);
-        headerShell.classList.toggle("shadow-emerald-900/5", isScrolled);
-
-        headerShell.classList.toggle("dark:border-slate-800", isScrolled);
-        headerShell.classList.toggle("dark:bg-slate-900/80", isScrolled);
-      };
-
-      themeToggle?.addEventListener("click", () => {
-        const isDark = document.documentElement.classList.toggle("dark");
-        localStorage.setItem("moveup-theme", isDark ? "dark" : "light");
-      });
-
-      const revealElements = document.querySelectorAll(".reveal");
-      const observer = (window.__revealObserver = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
-            }
-          });
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://moveuptecnologia.com.br/#organization",
+          "name": "Moveup Tecnologia",
+          "url": "https://moveuptecnologia.com.br/",
+          "logo": "https://moveuptecnologia.com.br/public/img/logo-light.svg",
+          "description": "Empresa de prestação de serviços de tecnologia com foco em desenvolvimento de softwares, aplicativos, sistemas web, integrações, automações e consultoria técnica.",
+          "areaServed": "BR",
+          "knowsAbout": [
+            "Desenvolvimento web",
+            "Desenvolvimento mobile",
+            "Integrações de sistemas",
+            "Automação de processos",
+            "Consultoria de desenvolvimento",
+            "Software sob medida para PMEs"
+          ]
         },
         {
-          threshold: 0.15,
-          rootMargin: "0px 0px -50px 0px",
+          "@type": "WebSite",
+          "@id": "https://moveuptecnologia.com.br/#website",
+          "url": "https://moveuptecnologia.com.br/",
+          "name": "Moveup Tecnologia",
+          "publisher": {
+            "@id": "https://moveuptecnologia.com.br/#organization"
+          },
+          "inLanguage": "pt-BR"
         },
-      ));
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://moveuptecnologia.com.br/#service",
+          "name": "Moveup Tecnologia",
+          "url": "https://moveuptecnologia.com.br/",
+          "image": "https://moveuptecnologia.com.br/public/og-image.jpg",
+          "description": "Desenvolvimento de software sob medida, aplicativos mobile, sistemas web, integrações, APIs, automações e consultoria técnica para pequenas e médias empresas.",
+          "areaServed": "BR",
+          "provider": {
+            "@id": "https://moveuptecnologia.com.br/#organization"
+          },
+          "serviceType": [
+            "Desenvolvimento de software",
+            "Aplicativos mobile",
+            "Sistemas web",
+            "Integrações e APIs",
+            "Automações",
+            "Consultoria técnica"
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body class="min-h-screen overflow-x-hidden">
+<a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-signal focus:px-4 focus:py-3 focus:font-semibold focus:text-coal">Pular para o conteúdo principal</a>
 
-      revealElements.forEach((element) => observer.observe(element));
-      syncHeaderOnScroll();
-      window.addEventListener("scroll", syncHeaderOnScroll, { passive: true });
-    </script>
-  </body>
+<header class="sticky top-0 z-50 border-b border-softline/90 bg-coal/85 backdrop-blur-xl">
+  <div class="mx-auto flex max-w-[1180px] items-center justify-between px-5 py-4 sm:px-8">
+    <a href="#inicio" class="group flex items-center gap-3" aria-label="Moveup Tecnologia - início">
+      <img src="public/img/logo-light.svg" alt="Moveup Tecnologia" class="h-9 w-auto transition duration-300 group-hover:scale-[1.03]">
+    </a>
+
+    <nav class="hidden items-center gap-8 text-sm text-muted md:flex" aria-label="Navegação principal">
+      <a class="transition hover:text-ink" href="#problema">O problema</a>
+      <a class="transition hover:text-ink" href="#servicos">Serviços</a>
+      <a class="transition hover:text-ink" href="cases.html">Cases</a>
+      <a class="transition hover:text-ink" href="#processo">Como funciona</a>
+    </nav>
+
+    <a href="#contato" class="group inline-flex items-center gap-2 rounded-md border border-line px-4 py-2.5 font-mono text-xs text-ink shadow-edge transition duration-300 hover:-translate-y-0.5 hover:border-greenDim hover:bg-moss">
+      <i data-lucide="message-circle" class="h-4 w-4"></i>
+      <span class="hidden sm:inline">Falar com a Moveup</span>
+      <span class="sm:hidden">Contato</span>
+    </a>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section id="inicio" class="relative overflow-hidden pb-12 pt-20 sm:pt-28" aria-labelledby="titulo-principal">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+      <div class="reveal inline-flex items-center gap-3 rounded-full border border-greenDim/40 bg-signal/5 px-4 py-2 font-mono text-xs tracking-wide text-signal">
+        <span class="pulse-dot h-2 w-2 rounded-full bg-signal"></span>
+        DISPONIVEL PARA NOVOS PROJETOS
+      </div>
+
+      <div class="reveal mt-8 max-w-5xl" style="transition-delay: .08s">
+        <h1 id="titulo-principal" class="font-serif text-[clamp(2.35rem,5.2vw,4.75rem)] font-semibold leading-[1.04] text-ink">
+          Sua empresa precisa de um app, sistema ou automação. <em class="font-medium text-signal">Não precisa de um time interno</em> pra isso.
+        </h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-muted">
+          A Moveup desenvolve softwares, apps e integrações sob medida para pequenas e médias empresas, com a qualidade de um time próprio e a agilidade de quem fala direto com quem programa.
+        </p>
+      </div>
+
+      <div class="reveal mt-10 flex flex-wrap items-center gap-5" style="transition-delay: .16s">
+        <a href="#contato" class="group inline-flex items-center gap-3 rounded-md bg-signal px-6 py-4 font-semibold text-coal shadow-glow transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(124,242,156,.2)]">
+          Quero um diagnóstico gratuito
+          <i data-lucide="arrow-right" class="h-5 w-5 transition group-hover:translate-x-1"></i>
+        </a>
+        <span class="font-mono text-xs text-faint">sem compromisso · resposta em até 1 dia útil</span>
+      </div>
+
+      <div class="reveal mt-16 grid border-t border-softline sm:grid-cols-2 lg:grid-cols-4" style="transition-delay: .22s">
+        <div class="group border-softline py-6 pr-6 sm:border-r lg:border-r">
+          <div class="flex items-center gap-3 font-mono text-2xl font-semibold text-ink">
+            <i data-lucide="star" class="h-5 w-5 fill-amber text-amber"></i>
+            5.0 / 5.0
+          </div>
+          <p class="mt-2 text-sm leading-6 text-faint">avaliação média nos projetos entregues</p>
+        </div>
+        <div class="border-softline py-6 pr-6 sm:pl-6 lg:border-r">
+          <div class="flex items-center gap-3 font-mono text-2xl font-semibold text-ink">
+            <i data-lucide="smartphone" class="h-5 w-5 text-signal"></i>
+            3
+          </div>
+          <p class="mt-2 text-sm leading-6 text-faint">apps desenvolvidos para uma única gestão de frota</p>
+        </div>
+        <div class="border-softline py-6 pr-6 sm:border-r lg:pl-6">
+          <div class="flex items-center gap-3 font-mono text-2xl font-semibold text-ink">
+            <i data-lucide="messages-square" class="h-5 w-5 text-signal"></i>
+            0
+          </div>
+          <p class="mt-2 text-sm leading-6 text-faint">intermediários entre você e o desenvolvedor</p>
+        </div>
+        <div class="py-6 pr-6 sm:pl-6">
+          <div class="flex items-center gap-3 font-mono text-2xl font-semibold text-ink">
+            <i data-lucide="clock-3" class="h-5 w-5 text-signal"></i>
+            1 dia útil
+          </div>
+          <p class="mt-2 text-sm leading-6 text-faint">para retorno do diagnóstico inicial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="problema" class="border-t border-softline py-20 sm:py-24">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+      <div class="reveal">
+        <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim">
+          <span class="h-px w-5 bg-greenDim"></span>
+          O problema
+        </div>
+        <h2 class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink">
+          Você sabe que precisa digitalizar um processo. O problema é o caminho até lá.
+        </h2>
+      </div>
+
+      <div class="mt-14 grid gap-10 lg:grid-cols-[1fr_.95fr] lg:gap-16">
+        <div class="reveal divide-y divide-softline border-y border-softline">
+          <div class="group flex gap-5 py-6 transition hover:bg-signal/[.025]">
+            <i data-lucide="x" class="mt-1 h-4 w-4 shrink-0 text-faint transition group-hover:text-signal"></i>
+            <p class="text-muted"><strong class="font-medium text-ink">Montar um time interno</strong> é caro e demora meses só pra contratar.</p>
+          </div>
+          <div class="group flex gap-5 py-6 transition hover:bg-signal/[.025]">
+            <i data-lucide="x" class="mt-1 h-4 w-4 shrink-0 text-faint transition group-hover:text-signal"></i>
+            <p class="text-muted"><strong class="font-medium text-ink">Agências grandes</strong> colocam você na fila, com gente júnior tocando o projeto e um gerente de contas no meio do caminho.</p>
+          </div>
+          <div class="group flex gap-5 py-6 transition hover:bg-signal/[.025]">
+            <i data-lucide="x" class="mt-1 h-4 w-4 shrink-0 text-faint transition group-hover:text-signal"></i>
+            <p class="text-muted"><strong class="font-medium text-ink">Freelancers isolados</strong> raramente entregam consistência, suporte e visão de longo prazo.</p>
+          </div>
+          <div class="group flex gap-5 py-6 transition hover:bg-signal/[.025]">
+            <i data-lucide="x" class="mt-1 h-4 w-4 shrink-0 text-faint transition group-hover:text-signal"></i>
+            <p class="text-muted">O resultado: planilhas que não aguentam o tamanho do negócio, processos manuais consumindo hora de gente cara, ou um app que ficou só na ideia.</p>
+          </div>
+        </div>
+
+        <div class="reveal overflow-hidden rounded-lg border border-line bg-panel shadow-edge transition duration-300 hover:-translate-y-1 hover:border-greenDim/60">
+          <div class="flex items-center gap-2 border-b border-line bg-moss px-4 py-3">
+            <span class="h-2.5 w-2.5 rounded-full bg-faint/50"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-faint/50"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-signal/70"></span>
+            <span class="ml-auto font-mono text-xs text-faint">moveup.dev</span>
+          </div>
+          <div class="space-y-2 p-6 font-mono text-sm leading-7 text-muted">
+            <div><span class="text-signal">$</span> diagnóstico --empresa "sua-empresa"</div>
+            <div class="text-faint">&gt; verificando time interno...</div>
+            <div class="text-faint">&gt; time interno: <span class="text-amber">não disponível</span></div>
+            <div class="text-faint">&gt; verificando orçamento de agência...</div>
+            <div class="text-faint">&gt; orçamento: <span class="text-amber">incompatível</span></div>
+            <div class="text-faint">&gt; buscando alternativa...</div>
+            <div>&gt; solução encontrada: <span class="text-signal">moveup.dev</span></div>
+            <div class="text-faint">&gt; comunicação direta: <span class="text-amber">ativada</span></div>
+            <div class="text-faint">&gt; status: <span class="text-amber">pronto pra começar</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-softline py-20 sm:py-24">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+      <div class="reveal">
+        <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim">
+          <span class="h-px w-5 bg-greenDim"></span>
+          A solução
+        </div>
+        <h2 class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink">
+          Desenvolvimento sob medida, sem o peso de uma estrutura grande
+        </h2>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-muted">
+          A Moveup existe pra resolver exatamente esse meio-termo. Você fala direto com quem está desenvolvendo, sem intermediário, sem telefone sem fio, sem esperar repasse de reunião.
+        </p>
+      </div>
+
+      <div class="mt-14 grid gap-px overflow-hidden rounded-lg border border-softline bg-softline md:grid-cols-3">
+        <article class="reveal group bg-coal p-8 transition duration-300 hover:bg-moss">
+          <div class="mb-6 flex h-11 w-11 items-center justify-center rounded-md border border-line bg-panel text-signal transition group-hover:-translate-y-1 group-hover:border-greenDim">
+            <i data-lucide="message-square-code" class="h-5 w-5"></i>
+          </div>
+          <div class="mb-4 font-mono text-xs text-greenDim">// 01</div>
+          <h3 class="text-lg font-semibold text-ink">Comunicação direta</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">Você conversa com o desenvolvedor responsável pelo seu projeto, não com um atendente que vai "verificar e te retornar".</p>
+        </article>
+        <article class="reveal group bg-coal p-8 transition duration-300 hover:bg-moss" style="transition-delay: .08s">
+          <div class="mb-6 flex h-11 w-11 items-center justify-center rounded-md border border-line bg-panel text-signal transition group-hover:-translate-y-1 group-hover:border-greenDim">
+            <i data-lucide="scale" class="h-5 w-5"></i>
+          </div>
+          <div class="mb-4 font-mono text-xs text-greenDim">// 02</div>
+          <h3 class="text-lg font-semibold text-ink">Entrega que cabe no seu orçamento</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">Projetos dimensionados pra realidade de PME, sem o overhead de uma agência grande.</p>
+        </article>
+        <article class="reveal group bg-coal p-8 transition duration-300 hover:bg-moss" style="transition-delay: .16s">
+          <div class="mb-6 flex h-11 w-11 items-center justify-center rounded-md border border-line bg-panel text-signal transition group-hover:-translate-y-1 group-hover:border-greenDim">
+            <i data-lucide="shield-check" class="h-5 w-5"></i>
+          </div>
+          <div class="mb-4 font-mono text-xs text-greenDim">// 03</div>
+          <h3 class="text-lg font-semibold text-ink">Qualidade que não é negociável</h3>
+          <p class="mt-3 text-sm leading-7 text-muted">Código bem feito, testado e documentado. O tipo de entrega que não vira dor de cabeça em 6 meses.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="servicos" class="border-t border-softline py-20 sm:py-24">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+      <div class="reveal">
+        <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim">
+          <span class="h-px w-5 bg-greenDim"></span>
+          O que fazemos
+        </div>
+        <h2 class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink">O que a Moveup desenvolve</h2>
+      </div>
+
+      <div class="reveal mt-14 divide-y divide-softline border-y border-softline">
+        <div class="group grid gap-4 py-7 transition hover:bg-signal/[.025] sm:grid-cols-[4rem_1fr_1.4fr] sm:items-center">
+          <div class="font-mono text-sm text-faint">01</div>
+          <div class="flex items-center gap-3 text-lg font-semibold text-ink"><i data-lucide="smartphone" class="h-5 w-5 text-signal"></i>Aplicativos mobile</div>
+          <p class="text-sm leading-7 text-muted">iOS e Android, do zero ou evoluindo o que já existe.</p>
+        </div>
+        <div class="group grid gap-4 py-7 transition hover:bg-signal/[.025] sm:grid-cols-[4rem_1fr_1.4fr] sm:items-center">
+          <div class="font-mono text-sm text-faint">02</div>
+          <div class="flex items-center gap-3 text-lg font-semibold text-ink"><i data-lucide="layout-dashboard" class="h-5 w-5 text-signal"></i>Sistemas web</div>
+          <p class="text-sm leading-7 text-muted">Gestão, dashboards e plataformas internas feitas sob medida.</p>
+        </div>
+        <div class="group grid gap-4 py-7 transition hover:bg-signal/[.025] sm:grid-cols-[4rem_1fr_1.4fr] sm:items-center">
+          <div class="font-mono text-sm text-faint">03</div>
+          <div class="flex items-center gap-3 text-lg font-semibold text-ink"><i data-lucide="plug-zap" class="h-5 w-5 text-signal"></i>Integrações e APIs</div>
+          <p class="text-sm leading-7 text-muted">Conectando sistemas que hoje não conversam entre si.</p>
+        </div>
+        <div class="group grid gap-4 py-7 transition hover:bg-signal/[.025] sm:grid-cols-[4rem_1fr_1.4fr] sm:items-center">
+          <div class="font-mono text-sm text-faint">04</div>
+          <div class="flex items-center gap-3 text-lg font-semibold text-ink"><i data-lucide="workflow" class="h-5 w-5 text-signal"></i>Automações</div>
+          <p class="text-sm leading-7 text-muted">Eliminando tarefas manuais e repetitivas do dia a dia.</p>
+        </div>
+        <div class="group grid gap-4 py-7 transition hover:bg-signal/[.025] sm:grid-cols-[4rem_1fr_1.4fr] sm:items-center">
+          <div class="font-mono text-sm text-faint">05</div>
+          <div class="flex items-center gap-3 text-lg font-semibold text-ink"><i data-lucide="users-round" class="h-5 w-5 text-signal"></i>Consultoria para times em formação</div>
+          <p class="text-sm leading-7 text-muted">Apoio técnico para empresas que estão montando seu próprio time de desenvolvimento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cases" class="border-t border-softline py-20 sm:py-24">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+      <div class="reveal">
+        <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim">
+          <span class="h-px w-5 bg-greenDim"></span>
+          Prova social
+        </div>
+        <h2 class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink">Quem já trabalhou com a gente, comprova</h2>
+      </div>
+
+      <div id="testimonials-grid" class="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3"></div>
+
+      <div class="reveal mt-8 flex flex-wrap items-center gap-4">
+        <div class="inline-flex flex-wrap items-center gap-3 rounded-full border border-line px-5 py-3 font-mono text-sm text-muted">
+          <span class="flex text-amber"><i data-lucide="star" class="h-4 w-4 fill-amber"></i><i data-lucide="star" class="h-4 w-4 fill-amber"></i><i data-lucide="star" class="h-4 w-4 fill-amber"></i><i data-lucide="star" class="h-4 w-4 fill-amber"></i><i data-lucide="star" class="h-4 w-4 fill-amber"></i></span>
+          5.0 de avaliação - projetos entregues via Workana
+        </div>
+        <a href="cases.html" class="group inline-flex items-center gap-2 rounded-md border border-line px-5 py-3 font-semibold text-ink transition duration-300 hover:-translate-y-0.5 hover:border-greenDim hover:bg-moss">
+          Ver página de cases
+          <i data-lucide="arrow-right" class="h-4 w-4 transition group-hover:translate-x-1"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="processo" class="border-t border-softline py-20 sm:py-24">
+    <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+      <div class="reveal">
+        <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim">
+          <span class="h-px w-5 bg-greenDim"></span>
+          Como funciona
+        </div>
+        <h2 class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink">Do diagnóstico ao app no ar</h2>
+      </div>
+
+      <div class="reveal relative mt-14">
+        <div class="absolute left-0 right-0 top-5 hidden h-px bg-line md:block"></div>
+        <div class="grid gap-8 md:grid-cols-4">
+          <div class="relative pt-12">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-signal bg-signal text-coal"><i data-lucide="search-check" class="h-5 w-5"></i></div>
+            <div class="mb-3 font-mono text-xs text-faint">PASSO 01</div>
+            <h4 class="font-semibold text-ink">Diagnóstico gratuito</h4>
+            <p class="mt-3 text-sm leading-7 text-muted">Entendemos seu problema e dizemos, com honestidade, se faz sentido seguir.</p>
+          </div>
+          <div class="relative pt-12">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-signal bg-signal text-coal"><i data-lucide="file-check-2" class="h-5 w-5"></i></div>
+            <div class="mb-3 font-mono text-xs text-faint">PASSO 02</div>
+            <h4 class="font-semibold text-ink">Proposta clara</h4>
+            <p class="mt-3 text-sm leading-7 text-muted">Escopo, prazo e investimento definidos antes de começar. Sem letra miúda.</p>
+          </div>
+          <div class="relative pt-12">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-greenDim bg-coal text-signal"><i data-lucide="code-2" class="h-5 w-5"></i></div>
+            <div class="mb-3 font-mono text-xs text-faint">PASSO 03</div>
+            <h4 class="font-semibold text-ink">Desenvolvimento direto</h4>
+            <p class="mt-3 text-sm leading-7 text-muted">Você acompanha o progresso falando com quem está construindo.</p>
+          </div>
+          <div class="relative pt-12">
+            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-full border border-greenDim bg-coal text-signal"><i data-lucide="rocket" class="h-5 w-5"></i></div>
+            <div class="mb-3 font-mono text-xs text-faint">PASSO 04</div>
+            <h4 class="font-semibold text-ink">Entrega e suporte</h4>
+            <p class="mt-3 text-sm leading-7 text-muted">Sistema no ar, com suporte para o que vier depois.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-softline bg-moss/80 py-20 sm:py-24" id="contato">
+    <div class="mx-auto grid max-w-[1180px] gap-12 px-5 sm:px-8 lg:grid-cols-[1.05fr_.95fr] lg:gap-16">
+      <div class="reveal">
+        <div class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim">
+          <span class="h-px w-5 bg-greenDim"></span>
+          Vamos conversar
+        </div>
+        <h2 class="font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink">Sua ideia não precisa esperar você montar um time</h2>
+        <p class="mt-5 max-w-2xl text-lg leading-8 text-muted">Conte pra gente o que sua empresa precisa. Em uma conversa rápida, mostramos o caminho mais direto pra tirar isso do papel.</p>
+        <ul class="mt-8 space-y-4">
+          <li class="flex gap-3 text-muted"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-signal"></i>Diagnóstico honesto, sem empurrar projeto que não faz sentido</li>
+          <li class="flex gap-3 text-muted"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-signal"></i>Conversa direta com quem vai desenvolver, desde o primeiro contato</li>
+          <li class="flex gap-3 text-muted"><i data-lucide="check-circle-2" class="mt-0.5 h-5 w-5 shrink-0 text-signal"></i>Proposta com escopo e prazo claros, sem letra miúda</li>
+        </ul>
+      </div>
+
+      <form class="reveal rounded-lg border border-line bg-panel p-6 shadow-edge sm:p-8" id="leadForm">
+        <div class="mb-6 flex items-center gap-3 font-mono text-xs text-faint">
+          <i data-lucide="send" class="h-4 w-4 text-signal"></i>
+          SOLICITAR DIAGNÓSTICO GRATUITO
+        </div>
+        <div class="space-y-5">
+          <label class="block">
+            <span class="mb-2 block font-mono text-xs text-muted">Nome</span>
+            <input class="w-full rounded-md border border-line bg-coal px-4 py-3 text-ink outline-none transition placeholder:text-faint focus:border-greenDim focus:ring-2 focus:ring-signal/10" type="text" id="nome" name="nome" autocomplete="name" required placeholder="Seu nome">
+          </label>
+          <label class="block">
+            <span class="mb-2 block font-mono text-xs text-muted">Empresa</span>
+            <input class="w-full rounded-md border border-line bg-coal px-4 py-3 text-ink outline-none transition placeholder:text-faint focus:border-greenDim focus:ring-2 focus:ring-signal/10" type="text" id="empresa" name="empresa" autocomplete="organization" required placeholder="Nome da empresa">
+          </label>
+          <label class="block">
+            <span class="mb-2 block font-mono text-xs text-muted">E-mail ou WhatsApp</span>
+            <input class="w-full rounded-md border border-line bg-coal px-4 py-3 text-ink outline-none transition placeholder:text-faint focus:border-greenDim focus:ring-2 focus:ring-signal/10" type="text" id="contato-campo" name="contato" autocomplete="email" required placeholder="seu@email.com ou (00) 00000-0000">
+          </label>
+          <label class="block">
+            <span class="mb-2 block font-mono text-xs text-muted">O que você precisa desenvolver?</span>
+            <select class="w-full rounded-md border border-line bg-coal px-4 py-3 text-ink outline-none transition focus:border-greenDim focus:ring-2 focus:ring-signal/10" id="necessidade" name="necessidade">
+              <option>App mobile</option>
+              <option>Sistema web</option>
+              <option>Integração ou API</option>
+              <option>Automação de processo</option>
+              <option>Consultoria para meu time</option>
+              <option>Ainda não sei, quero conversar</option>
+            </select>
+          </label>
+        </div>
+        <button type="submit" class="mt-6 inline-flex w-full items-center justify-center gap-3 rounded-md bg-signal px-5 py-4 font-semibold text-coal transition duration-300 hover:-translate-y-0.5 hover:shadow-glow">
+          <span>Enviar e agendar diagnóstico</span>
+          <i data-lucide="arrow-right" class="h-5 w-5"></i>
+        </button>
+        <div class="mt-4 text-center font-mono text-xs text-faint">resposta em até 1 dia útil · sem compromisso</div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="border-t border-softline bg-coal/80 py-12">
+  <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+    <div class="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+      <div>
+        <img src="public/img/logo-light.svg" alt="Moveup Tecnologia" class="h-32 w-auto opacity-90">
+        <p class="mt-5 max-w-sm text-sm leading-7 text-muted">Impulsionando o futuro.</p>
+      </div>
+
+      <div>
+        <h2 class="font-mono text-xs uppercase tracking-[.18em] text-greenDim">Contatos</h2>
+        <ul class="mt-5 space-y-3 text-sm text-muted">
+          <li>
+            <a href="https://wa.me/5541999320954" class="group inline-flex items-center gap-3 transition hover:text-ink" target="_blank" rel="noopener noreferrer" aria-label="Chamar a Moveup no WhatsApp">
+              <i data-lucide="message-circle" class="h-4 w-4 text-signal"></i>
+              <span>(41) 99932-0954</span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contato@moveuptecnologia.com.br" class="group inline-flex items-center gap-3 transition hover:text-ink" aria-label="Enviar e-mail para contato@moveuptecnologia.com.br">
+              <i data-lucide="mail" class="h-4 w-4 text-signal"></i>
+              <span>contato@moveuptecnologia.com.br</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="font-mono text-xs uppercase tracking-[.18em] text-greenDim">Canais</h2>
+        <ul class="mt-5 space-y-3 text-sm text-muted">
+          <li>
+            <a href="https://instagram.com/moveup.tech" class="group inline-flex items-center gap-3 transition hover:text-ink" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram da Moveup">
+              <i data-lucide="instagram" class="h-4 w-4 text-signal"></i>
+              <span>@moveup.tech</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/moveup-tecnologia" class="group inline-flex items-center gap-3 transition hover:text-ink" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn da Moveup Tecnologia">
+              <i data-lucide="linkedin" class="h-4 w-4 text-signal"></i>
+              <span>moveup-tecnologia</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/moveup.tech" class="group inline-flex items-center gap-3 transition hover:text-ink" target="_blank" rel="noopener noreferrer" aria-label="Abrir Twitter da Moveup">
+              <i data-lucide="twitter" class="h-4 w-4 text-signal"></i>
+              <span>@moveup.tech</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-softline pt-6 text-xs text-faint">
+      <div>© 2026 Moveup Tecnologia. Todos os direitos reservados.</div>
+      <a href="#inicio" class="inline-flex items-center gap-2 transition hover:text-ink">
+        Voltar ao topo
+        <i data-lucide="arrow-up" class="h-4 w-4"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="./public/js/index.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons({
+    attrs: {
+      'stroke-width': 1.75
+    }
+  });
+
+  document.querySelectorAll('[data-lucide]').forEach((icon) => {
+    icon.setAttribute('aria-hidden', 'true');
+    icon.setAttribute('focusable', 'false');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.14 });
+
+  document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+  document.getElementById('leadForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('button[type="submit"]');
+    const label = btn.querySelector('span');
+    const original = label.textContent;
+    label.textContent = 'Enviado';
+    btn.classList.add('opacity-75');
+    setTimeout(() => {
+      label.textContent = original;
+      btn.classList.remove('opacity-75');
+      this.reset();
+    }, 2500);
+  });
+</script>
+
+</body>
 </html>

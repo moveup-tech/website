@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cases | Moveup Tecnologia</title>
+    <meta
+      name="description"
+      content="Conheça cases da Moveup Tecnologia em aplicativos mobile, sistemas web, streaming ao vivo, integrações, automações e plataformas sob medida."
+    />
+    <meta
+      name="keywords"
+      content="cases Moveup Tecnologia, portfolio desenvolvimento de software, aplicativo patrulhamento, streaming ao vivo, sistema locação motos, software sob medida"
+    />
+    <meta name="author" content="Moveup Tecnologia" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0E1210" />
+    <link rel="canonical" href="https://moveuptecnologia.com.br/cases.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Moveup Tecnologia" />
+    <meta property="og:title" content="Cases | Moveup Tecnologia" />
+    <meta
+      property="og:description"
+      content="Projetos sob medida em mobile, web, streaming, integrações e automações desenvolvidos pela Moveup Tecnologia."
+    />
+    <meta
+      property="og:url"
+      content="https://moveuptecnologia.com.br/cases.html"
+    />
+    <meta
+      property="og:image"
+      content="https://moveuptecnologia.com.br/public/og-image.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://moveuptecnologia.com.br/public/og-image.jpg"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Cases da Moveup Tecnologia" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cases | Moveup Tecnologia" />
+    <meta
+      name="twitter:description"
+      content="Projetos sob medida em mobile, web, streaming, integrações e automações desenvolvidos pela Moveup Tecnologia."
+    />
+    <meta
+      name="twitter:image"
+      content="https://moveuptecnologia.com.br/public/og-image.jpg"
+    />
+    <meta name="twitter:image:alt" content="Cases da Moveup Tecnologia" />
+
+    <link rel="shortcut icon" href="/public/favicon.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              coal: "#0E1210",
+              moss: "#141A17",
+              panel: "#1A211D",
+              line: "#2A332C",
+              softline: "#232B26",
+              ink: "#ECEFEA",
+              muted: "#A8B2A9",
+              faint: "#6E7A70",
+              signal: "#7CF29C",
+              greenDim: "#4F9A66",
+              amber: "#F2C879",
+            },
+            fontFamily: {
+              sans: ["Space Grotesk", "sans-serif"],
+              serif: ["Fraunces", "serif"],
+              mono: ["JetBrains Mono", "monospace"],
+            },
+            boxShadow: {
+              glow: "0 20px 80px rgba(124,242,156,.14)",
+              edge: "0 1px 0 rgba(255,255,255,.05) inset",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Space Grotesk", sans-serif;
+        background: #0e1210;
+        color: #ecefea;
+        -webkit-font-smoothing: antialiased;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -2;
+        background:
+          radial-gradient(
+            circle at 18% 12%,
+            rgba(124, 242, 156, 0.12),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 82% 8%,
+            rgba(242, 200, 121, 0.08),
+            transparent 28%
+          ),
+          linear-gradient(#232b26 1px, transparent 1px),
+          linear-gradient(90deg, #232b26 1px, transparent 1px), #0e1210;
+        background-size:
+          auto,
+          auto,
+          64px 64px,
+          64px 64px,
+          auto;
+        mask-image: radial-gradient(
+          ellipse 85% 65% at 50% 0%,
+          black 45%,
+          transparent 100%
+        );
+        opacity: 0.88;
+        pointer-events: none;
+      }
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: linear-gradient(
+          115deg,
+          transparent 0%,
+          rgba(124, 242, 156, 0.05) 45%,
+          transparent 65%
+        );
+        transform: translateX(-70%);
+        animation: sheen 12s ease-in-out infinite;
+        pointer-events: none;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(18px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .pulse-dot {
+        animation: pulseDot 1.8s ease-in-out infinite;
+      }
+      @keyframes pulseDot {
+        0%,
+        100% {
+          opacity: 1;
+          box-shadow: 0 0 0 0 rgba(124, 242, 156, 0.45);
+        }
+        50% {
+          opacity: 0.55;
+          box-shadow: 0 0 0 8px rgba(124, 242, 156, 0);
+        }
+      }
+      @keyframes sheen {
+        0%,
+        72%,
+        100% {
+          transform: translateX(-70%);
+        }
+        86% {
+          transform: translateX(70%);
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Cases | Moveup Tecnologia",
+        "url": "https://moveuptecnologia.com.br/cases.html",
+        "description": "Cases de desenvolvimento de software sob medida da Moveup Tecnologia.",
+        "isPartOf": {
+          "@type": "WebSite",
+          "name": "Moveup Tecnologia",
+          "url": "https://moveuptecnologia.com.br/"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "CreativeWork",
+              "position": 1,
+              "name": "Active Track - Aplicativo para gestão de patrulhas e vigilância",
+              "description": "Aplicativo mobile para registro de rondas, envio de ocorrências, eventos SOS e monitoramento em tempo real de equipes de segurança."
+            },
+            {
+              "@type": "CreativeWork",
+              "position": 2,
+              "name": "Infraestrutura de streaming para transmissões ao vivo através do celular",
+              "description": "Arquitetura escalável para transmissões em tempo real com autenticação, gerenciamento de sessões e distribuição de conteúdo."
+            },
+            {
+              "@type": "CreativeWork",
+              "position": 3,
+              "name": "Blue Moto Rent - Sistema de locação e assinatura de motocicletas",
+              "description": "Plataforma para gerenciamento de contratos, validação de documentos e administração de planos de aluguel de motos."
+            }
+          ]
+        }
+      }
+    </script>
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <a
+      href="#conteudo"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-signal focus:px-4 focus:py-3 focus:font-semibold focus:text-coal"
+      >Pular para o conteúdo principal</a
+    >
+
+    <header
+      class="sticky top-0 z-50 border-b border-softline/90 bg-coal/85 backdrop-blur-xl"
+    >
+      <div
+        class="mx-auto flex max-w-[1180px] items-center justify-between px-5 py-4 sm:px-8"
+      >
+        <a
+          href="index.html#inicio"
+          class="group flex items-center gap-3"
+          aria-label="Moveup Tecnologia - início"
+        >
+          <img
+            src="public/img/logo-light.svg"
+            alt="Moveup Tecnologia"
+            class="h-9 w-auto transition duration-300 group-hover:scale-[1.03]"
+          />
+        </a>
+
+        <nav
+          class="hidden items-center gap-8 text-sm text-muted md:flex"
+          aria-label="Navegação principal"
+        >
+          <a class="transition hover:text-ink" href="index.html#problema"
+            >O problema</a
+          >
+          <a class="transition hover:text-ink" href="index.html#servicos"
+            >Serviços</a
+          >
+          <a class="text-ink" href="cases.html" aria-current="page">Cases</a>
+          <a class="transition hover:text-ink" href="index.html#processo"
+            >Como funciona</a
+          >
+        </nav>
+
+        <a
+          href="index.html#contato"
+          class="group inline-flex items-center gap-2 rounded-md border border-line px-4 py-2.5 font-mono text-xs text-ink shadow-edge transition duration-300 hover:-translate-y-0.5 hover:border-greenDim hover:bg-moss"
+        >
+          <i data-lucide="message-circle" class="h-4 w-4"></i>
+          <span class="hidden sm:inline">Falar com a Moveup</span>
+          <span class="sm:hidden">Contato</span>
+        </a>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section
+        class="relative overflow-hidden pb-12 pt-20 sm:pt-28"
+        aria-labelledby="titulo-principal"
+      >
+        <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+          <div
+            class="reveal inline-flex items-center gap-3 rounded-full border border-greenDim/40 bg-signal/5 px-4 py-2 font-mono text-xs tracking-wide text-signal"
+          >
+            <span class="pulse-dot h-2 w-2 rounded-full bg-signal"></span>
+            CASES MOVEUP
+          </div>
+
+          <div class="reveal mt-8 max-w-5xl" style="transition-delay: 0.08s">
+            <h1
+              id="titulo-principal"
+              class="font-serif text-[clamp(2.35rem,5.2vw,4.75rem)] font-semibold leading-[1.04] text-ink"
+            >
+              Projetos reais, construídos para resolver gargalos de operação.
+            </h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-muted">
+              Uma seleção de softwares, aplicativos e infraestruturas sob medida
+              desenvolvidos para transformar processos manuais em produtos
+              digitais confiáveis.
+            </p>
+          </div>
+
+          <div
+            class="reveal mt-10 flex flex-wrap items-center gap-5"
+            style="transition-delay: 0.16s"
+          >
+            <a
+              href="#projetos"
+              class="group inline-flex items-center gap-3 rounded-md bg-signal px-6 py-4 font-semibold text-coal shadow-glow transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(124,242,156,.2)]"
+            >
+              Ver cases
+              <i
+                data-lucide="arrow-down"
+                class="h-5 w-5 transition group-hover:translate-y-1"
+              ></i>
+            </a>
+            <a
+              href="index.html#contato"
+              class="inline-flex items-center gap-3 rounded-md border border-line px-6 py-4 font-semibold text-ink transition duration-300 hover:-translate-y-1 hover:border-greenDim hover:bg-moss"
+            >
+              Conversar sobre meu projeto
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="projetos" class="border-t border-softline py-20 sm:py-24">
+        <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+          <div class="reveal">
+            <div
+              class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim"
+            >
+              <span class="h-px w-5 bg-greenDim"></span>
+              Projetos selecionados
+            </div>
+            <h2
+              class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink"
+            >
+              Cases que unem produto, engenharia e operação.
+            </h2>
+          </div>
+
+          <div id="cases-grid" class="mt-14 grid gap-7 lg:grid-cols-3"></div>
+        </div>
+      </section>
+
+      <section id="cases" class="border-t border-softline py-20 sm:py-24">
+        <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+          <div class="reveal">
+            <div
+              class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim"
+            >
+              <span class="h-px w-5 bg-greenDim"></span>
+              Prova social
+            </div>
+            <h2
+              class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink"
+            >
+              Quem já trabalhou com a gente, comprova
+            </h2>
+          </div>
+
+          <div
+            id="testimonials-grid"
+            class="mt-14 grid gap-7 md:grid-cols-2 lg:grid-cols-3"
+          ></div>
+
+          <div class="reveal mt-8 flex flex-wrap items-center gap-4">
+            <div
+              class="inline-flex flex-wrap items-center gap-3 rounded-full border border-line px-5 py-3 font-mono text-sm text-muted"
+            >
+              <span class="flex text-amber"
+                ><i data-lucide="star" class="h-4 w-4 fill-amber"></i
+                ><i data-lucide="star" class="h-4 w-4 fill-amber"></i
+                ><i data-lucide="star" class="h-4 w-4 fill-amber"></i
+                ><i data-lucide="star" class="h-4 w-4 fill-amber"></i
+                ><i data-lucide="star" class="h-4 w-4 fill-amber"></i
+              ></span>
+              5.0 de avaliação - projetos entregues via Workana
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-softline bg-moss/80 py-20 sm:py-24">
+        <div
+          class="mx-auto grid max-w-[1180px] gap-8 px-5 sm:px-8 lg:grid-cols-[1fr_auto] lg:items-center"
+        >
+          <div class="reveal">
+            <div
+              class="mb-5 flex items-center gap-3 font-mono text-xs uppercase tracking-[.18em] text-greenDim"
+            >
+              <span class="h-px w-5 bg-greenDim"></span>
+              Próximo case
+            </div>
+            <h2
+              class="max-w-3xl font-serif text-[clamp(1.8rem,3.4vw,2.75rem)] font-semibold leading-tight text-ink"
+            >
+              Vamos transformar o seu gargalo em um produto digital?
+            </h2>
+          </div>
+          <div class="reveal">
+            <a
+              href="index.html#contato"
+              class="group inline-flex items-center gap-3 rounded-md bg-signal px-6 py-4 font-semibold text-coal shadow-glow transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_80px_rgba(124,242,156,.2)]"
+            >
+              Iniciar diagnóstico
+              <i
+                data-lucide="arrow-right"
+                class="h-5 w-5 transition group-hover:translate-x-1"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-softline bg-coal/80 py-12">
+      <div class="mx-auto max-w-[1180px] px-5 sm:px-8">
+        <div class="grid gap-10 md:grid-cols-[1.2fr_1fr_1fr]">
+          <div>
+            <img
+              src="public/img/logo-light.svg"
+              alt="Moveup Tecnologia"
+              class="h-32 w-auto opacity-90"
+            />
+            <p class="mt-5 max-w-sm text-sm leading-7 text-muted">
+              Impulsionando o futuro.
+            </p>
+          </div>
+
+          <div>
+            <h2
+              class="font-mono text-xs uppercase tracking-[.18em] text-greenDim"
+            >
+              Contatos
+            </h2>
+            <ul class="mt-5 space-y-3 text-sm text-muted">
+              <li>
+                <a
+                  href="https://wa.me/5541999320954"
+                  class="group inline-flex items-center gap-3 transition hover:text-ink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chamar a Moveup no WhatsApp"
+                >
+                  <i
+                    data-lucide="message-circle"
+                    class="h-4 w-4 text-signal"
+                  ></i>
+                  <span>(41) 99932-0954</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:contato@moveuptecnologia.com.br"
+                  class="group inline-flex items-center gap-3 transition hover:text-ink"
+                  aria-label="Enviar e-mail para contato@moveuptecnologia.com.br"
+                >
+                  <i data-lucide="mail" class="h-4 w-4 text-signal"></i>
+                  <span>contato@moveuptecnologia.com.br</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h2
+              class="font-mono text-xs uppercase tracking-[.18em] text-greenDim"
+            >
+              Canais
+            </h2>
+            <ul class="mt-5 space-y-3 text-sm text-muted">
+              <li>
+                <a
+                  href="https://instagram.com/moveup.tech"
+                  class="group inline-flex items-center gap-3 transition hover:text-ink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir Instagram da Moveup"
+                >
+                  <i data-lucide="instagram" class="h-4 w-4 text-signal"></i>
+                  <span>@moveup.tech</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/moveup-tecnologia"
+                  class="group inline-flex items-center gap-3 transition hover:text-ink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir LinkedIn da Moveup Tecnologia"
+                >
+                  <i data-lucide="linkedin" class="h-4 w-4 text-signal"></i>
+                  <span>moveup-tecnologia</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://twitter.com/moveup.tech"
+                  class="group inline-flex items-center gap-3 transition hover:text-ink"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Abrir Twitter da Moveup"
+                >
+                  <i data-lucide="twitter" class="h-4 w-4 text-signal"></i>
+                  <span>@moveup.tech</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="mt-10 flex flex-wrap items-center justify-between gap-4 border-t border-softline pt-6 text-xs text-faint"
+        >
+          <div>© 2026 Moveup Tecnologia. Todos os direitos reservados.</div>
+          <a
+            href="#inicio"
+            class="inline-flex items-center gap-2 transition hover:text-ink"
+          >
+            Voltar ao topo
+            <i data-lucide="arrow-up" class="h-4 w-4"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="./public/js/cases.js"></script>
+    <script type="module" src="./public/js/testimonials.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+      lucide.createIcons({
+        attrs: {
+          "stroke-width": 1.75,
+        },
+      });
+
+      document.querySelectorAll("[data-lucide]").forEach((icon) => {
+        icon.setAttribute("aria-hidden", "true");
+        icon.setAttribute("focusable", "false");
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.14 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
