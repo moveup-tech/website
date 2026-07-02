@@ -111,6 +111,42 @@
     .pulse-dot {
       animation: pulseDot 1.8s ease-in-out infinite;
     }
+    .site-header {
+      transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .site-header.is-compact {
+      box-shadow: 0 14px 40px rgba(0, 0, 0, .18);
+    }
+    .header-logo {
+      display: flex;
+      width: 6.75rem;
+      height: 6.75rem;
+      align-items: center;
+      justify-content: center;
+      border-radius: .5rem;
+      background: rgba(14, 18, 16, .96);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, .3), 0 20px 80px rgba(124, 242, 156, .14);
+      transform: translateY(1.5rem);
+      transition: width .32s ease, height .32s ease, transform .32s ease, background-color .32s ease, box-shadow .32s ease;
+    }
+    .header-logo img {
+      height: 4.25rem;
+      width: auto;
+      transition: height .32s ease, transform .32s ease;
+    }
+    .header-logo:hover img {
+      transform: scale(1.03);
+    }
+    .site-header.is-compact .header-logo {
+      width: 3.2rem;
+      height: 2.25rem;
+      background: transparent;
+      box-shadow: none;
+      transform: translateY(0);
+    }
+    .site-header.is-compact .header-logo img {
+      height: 2.25rem;
+    }
     @keyframes pulseDot {
       0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(124,242,156,.45); }
       50% { opacity: .55; box-shadow: 0 0 0 8px rgba(124,242,156,0); }
@@ -126,6 +162,15 @@
         scroll-behavior: auto !important;
       }
       .reveal { opacity: 1; transform: none; }
+    }
+    @media (max-width: 640px) {
+      .header-logo {
+        width: 5.75rem;
+        height: 5.75rem;
+      }
+      .header-logo img {
+        height: 3.5rem;
+      }
     }
   </style>
   <script type="application/ld+json">
@@ -186,10 +231,10 @@
 <body class="min-h-screen overflow-x-hidden">
 <a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-md focus:bg-signal focus:px-4 focus:py-3 focus:font-semibold focus:text-coal">Pular para o conteúdo principal</a>
 
-<header class="sticky top-0 z-50 border-b border-softline/90 bg-coal/85 backdrop-blur-xl">
-  <div class="mx-auto flex max-w-[1180px] items-center justify-between px-5 py-4 sm:px-8">
-    <a href="#inicio" class="group flex items-center gap-3" aria-label="Moveup Tecnologia - início">
-      <img src="public/img/logo-light.svg" alt="Moveup Tecnologia" class="h-9 w-auto transition duration-300 group-hover:scale-[1.03]">
+<header id="siteHeader" class="site-header sticky top-0 z-50 border-b border-softline/90 bg-coal/85 backdrop-blur-xl">
+  <div class="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-5 sm:px-8">
+    <a href="#inicio" class="header-logo group shrink-0" aria-label="Moveup Tecnologia - início">
+      <img src="public/img/logo-light.svg" alt="Moveup Tecnologia">
     </a>
 
     <nav class="hidden items-center gap-8 text-sm text-muted md:flex" aria-label="Navegação principal">
@@ -601,6 +646,14 @@
     icon.setAttribute('aria-hidden', 'true');
     icon.setAttribute('focusable', 'false');
   });
+
+  const siteHeader = document.getElementById('siteHeader');
+  const syncHeaderLogo = () => {
+    siteHeader.classList.toggle('is-compact', window.scrollY > 24);
+  };
+
+  syncHeaderLogo();
+  window.addEventListener('scroll', syncHeaderLogo, { passive: true });
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
