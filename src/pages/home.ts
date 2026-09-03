@@ -1,10 +1,14 @@
 import { Button } from "../components/button";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
-import { testimonials as partnerShowcase } from "../data/testimonials";
 
 import { createIcons, icons } from "lucide";
 
+import {
+  getPartnerMediaUrl,
+  getPartners,
+  type Partner,
+} from "../http/requests/strapi/partners";
 import {
   getTestimonials,
   type Testimonial,
@@ -37,6 +41,62 @@ const getInitials = (name: string) =>
     .map((word) => word.charAt(0))
     .join("")
     .toUpperCase();
+
+const renderPartner = (partner: Partner) => {
+  const page = safeExternalUrl(partner.page || "");
+  const logo = partner.logo?.[0];
+  const logoUrl = getPartnerMediaUrl(logo?.url || "");
+  const name = partner.name || "Cliente Move Up";
+
+  return /* html */ `
+    <li class="min-w-0 border-zinc-800 sm:border-r sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(4n)]:border-r-0">
+      <a
+        href="${escapeHtml(page)}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Visitar o site de ${escapeHtml(name)}"
+        class="group flex min-h-36 items-center justify-between gap-6 px-5 py-8 outline-none transition-colors duration-300 hover:bg-zinc-900 focus-visible:bg-zinc-900 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-400 sm:min-h-44 lg:px-6"
+      >
+        <span class="flex min-w-0 flex-1 items-center justify-center">
+          ${
+            logoUrl
+              ? `<img src="${escapeHtml(logoUrl)}" alt="${escapeHtml(logo?.alternativeText || name)}" width="${logo?.width || 293}" height="${logo?.height || 43}" class="max-h-11 w-auto max-w-full object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" loading="lazy" />`
+              : `<span class="break-words text-center text-2xl font-bold tracking-[-0.03em] text-zinc-300 transition-colors duration-300 group-hover:text-white group-focus-visible:text-white">${escapeHtml(name)}</span>`
+          }
+        </span>
+        <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0 text-zinc-600 transition-colors duration-300 group-hover:text-emerald-400 group-focus-visible:text-emerald-400" aria-hidden="true"></i>
+      </a>
+    </li>
+  `;
+};
+
+async function loadPartners() {
+  const container = document.querySelector<HTMLElement>("#partner-list");
+  if (!container) return;
+
+  container.setAttribute("aria-busy", "true");
+
+  try {
+    const response = await getPartners();
+
+    container.innerHTML = response.data.length
+      ? response.data.map(renderPartner).join("")
+      : `<li class="px-5 py-10 text-zinc-400 sm:col-span-2 lg:col-span-4">Nossos clientes serão apresentados em breve.</li>`;
+    createIcons({ icons });
+  } catch {
+    container.innerHTML = `
+      <li class="px-5 py-10 text-zinc-400 sm:col-span-2 lg:col-span-4">
+        <p>Não foi possível carregar os clientes agora.</p>
+        <button type="button" data-retry-partners class="mt-4 min-h-11 rounded-md border border-zinc-700 px-4 font-semibold text-white transition-colors hover:border-emerald-400 hover:text-emerald-400 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400">Tentar novamente</button>
+      </li>
+    `;
+    container
+      .querySelector<HTMLButtonElement>("[data-retry-partners]")
+      ?.addEventListener("click", () => void loadPartners());
+  } finally {
+    container.removeAttribute("aria-busy");
+  }
+}
 
 const renderTestimonial = (testimonial: Testimonial) => {
   const partnerName = testimonial.partner?.name || "Cliente Move Up";
@@ -149,6 +209,7 @@ const processSteps = [
 ];
 
 export function Home() {
+  queueMicrotask(() => void loadPartners());
   queueMicrotask(() => void loadTestimonials());
 
   return /* html*/ `
@@ -193,31 +254,8 @@ export function Home() {
             </h2>
           </div>
 
-          <ul class="grid grid-cols-1 border-b border-zinc-800 sm:grid-cols-2 lg:grid-cols-4" aria-label="Clientes da Move Up Tecnologia">
-            ${partnerShowcase
-              .map(
-                (testimonial, index) => `
-                  <li class="border-zinc-800 sm:border-r sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:last:border-r-0">
-                    <a
-                      href="${testimonial.site}"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label="Visitar o site de ${testimonial.name}"
-                      class="group flex min-h-36 items-center justify-between gap-6 px-5 py-8 outline-none transition-colors duration-300 hover:bg-zinc-900 focus-visible:bg-zinc-900 focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-emerald-400 sm:min-h-44 lg:px-6"
-                    >
-                      <span class="flex min-w-0 flex-1 items-center justify-center">
-                        ${
-                          testimonial.img
-                            ? `<img src="${testimonial.img}" alt="${testimonial.name}" width="${index === 2 ? "92" : index === 0 ? "226" : "293"}" height="43" class="max-h-11 w-auto max-w-full object-contain brightness-0 invert opacity-70 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" loading="lazy" />`
-                            : `<span class="text-2xl font-bold tracking-[-0.03em] text-zinc-300 transition-colors duration-300 group-hover:text-white group-focus-visible:text-white">OUI Tecnologia</span>`
-                        }
-                      </span>
-                      <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0 text-zinc-600 transition-colors duration-300 group-hover:text-emerald-400 group-focus-visible:text-emerald-400" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                `,
-              )
-              .join("")}
+          <ul id="partner-list" class="grid grid-cols-1 border-b border-zinc-800 sm:grid-cols-2 lg:grid-cols-4" aria-label="Clientes da Move Up Tecnologia" aria-live="polite" aria-busy="true">
+            <li class="px-5 py-10 text-zinc-400 sm:col-span-2 lg:col-span-4">Carregando clientes…</li>
           </ul>
         </div>
       </section>
