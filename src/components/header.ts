@@ -1,15 +1,10 @@
 import { Button } from "./button";
 
 import Logo from "../assets/logo/dark.svg";
-import { router } from "../routes";
-
 export function Header() {
-  const { route } = router.getCurrentLocation();
   const sections = [
     { href: "#home", label: "Início" },
-    { href: "#partners", label: "Clientes" },
-    { href: "#about", label: "Sobre nós" },
-    { href: "#process", label: "Processo" },
+    { href: "#process", label: "Método" },
     { href: "#services", label: "Serviços" },
     { href: "#testimonials", label: "Depoimentos" },
     { href: "#contact", label: "Contato" },
@@ -18,14 +13,14 @@ export function Header() {
   const desktopLinks = sections
     .map(
       ({ href, label }) =>
-        `<li><a href="${href}" data-location="${href}" class="text-zinc-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400 data-[location=${route.name}]:text-emerald-400">${label}</a></li>`,
+        `<li><a href="${href}" data-section-link="${href.slice(1)}" class="text-zinc-300 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-400 aria-[current=location]:text-emerald-400">${label}</a></li>`,
     )
     .join("");
 
   const mobileLinks = sections
     .map(
       ({ href, label }) =>
-        `<li><a href="${href}" class="mobile-menu-link flex min-h-12 items-center border-b border-zinc-700/60 py-3 text-zinc-300 transition-colors last:border-b-0 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-emerald-400">${label}</a></li>`,
+        `<li><a href="${href}" data-section-link="${href.slice(1)}" class="mobile-menu-link flex min-h-12 items-center border-b border-zinc-700/60 py-3 text-zinc-300 transition-colors last:border-b-0 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-emerald-400 aria-[current=location]:text-emerald-400">${label}</a></li>`,
     )
     .join("");
 

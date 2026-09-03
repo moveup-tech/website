@@ -13,7 +13,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Excelente customerprofissional, trabalho de qualidade e muito inteligente.",
+      "Excelente profissional, trabalho de qualidade e muito inteligente.",
     name: "Emmanuel Augusto",
     role: "Product Owner, Active Track Brasil",
     initials: "EA",

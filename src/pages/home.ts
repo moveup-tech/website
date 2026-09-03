@@ -101,7 +101,10 @@ async function loadTestimonials() {
 
     container.innerHTML = response.data.length
       ? response.data.map(renderTestimonial).join("")
-      : `<p class="py-10 leading-7 text-zinc-600 dark:text-zinc-400">Os depoimentos serão publicados em breve.</p>`;
+      : `<div class="py-10">
+          <p class="leading-7 text-zinc-600 dark:text-zinc-400">Os depoimentos serão publicados em breve.</p>
+          <a href="#partners" class="mt-4 inline-flex min-h-11 items-center font-semibold text-emerald-700 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-emerald-400">Conheça nossos clientes</a>
+        </div>`;
     createIcons({ icons });
   } catch {
     container.innerHTML = `
@@ -153,36 +156,33 @@ export function Home() {
     <main class="w-full">
       <section id="home" class="mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-36">
         <div class="mb-6 flex w-fit items-center gap-2 rounded-lg border border-zinc-200 bg-white px-4 py-2 dark:border-zinc-800 dark:bg-zinc-900">
-          <div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
+          <div class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></div>
           <small class="text-xs text-black dark:text-white">
             Desenvolvimento de software sob medida.
           </small>
         </div>
         <h1 class="mb-6 max-w-6xl text-center text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-black text-balance dark:text-white sm:mb-8 sm:text-5xl lg:text-6xl">
-          Sua ideia vira sistema. Seu processo vira automação. Seu negócio vira mais <em class="text-cyan-500">eficiente</em>.
+          Sua ideia vira sistema. Seu processo vira automação. Seu negócio entra em <em class="text-emerald-600 dark:text-emerald-400">movimento</em>.
         </h1>
         <p class="mt-4 max-w-3xl text-center text-base leading-7 text-zinc-700 dark:text-zinc-400 sm:text-lg sm:leading-8">
-          Desenvolvemos aplicativos web, mobile e desktop, integrações e automações que resolvem problemas reais — sem enrolação, sem retrabalho, no prazo combinado.
+          Desenvolvemos aplicativos, sistemas, integrações e automações sob medida, organizando cada projeto do problema real à entrega em produção.
         </p>
         <div class="mt-10 flex w-full flex-col items-center p-4 sm:mt-16">
           ${Button({ title: "Solicitar orçamento gratuito", href: "#contact" })}
-          <small class="text-black dark:text-zinc-400 mt-4 text-center text-xm">
-            Resposta em até 1 dia útil · Sem compromisso
+          <small class="mt-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
+            Conte o contexto primeiro. A conversa começa sem compromisso.
           </small>
         </div>
-        <div class="mt-8 grid w-full max-w-3xl gap-4 border-t border-t-zinc-200 pt-6 dark:border-t-zinc-900 sm:mt-12 sm:grid-cols-2 sm:gap-6">
-          <div class="flex w-full items-center gap-2">
-            <i data-lucide="star" class="text-yellow-500"></i>
-            <p class="text-black dark:text-zinc-400">
-              5.0 de avaliação com clientes reais.
-            </p>
-          </div>
-          <div class="flex w-full items-center gap-2">
-            <i data-lucide="user" class="text-green-500"></i>
-            <p class="text-black dark:text-zinc-400">
-              +50 mil usuários impactados.
-            </p>
-          </div>
+        <div class="mt-8 flex w-full max-w-3xl flex-col items-center justify-center gap-3 border-t border-zinc-200 pt-6 text-sm text-zinc-600 dark:border-zinc-900 dark:text-zinc-400 sm:mt-12 sm:flex-row sm:gap-8">
+          <a href="#process" class="inline-flex min-h-11 items-center gap-2 font-semibold text-zinc-800 underline-offset-4 hover:text-emerald-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-zinc-200 dark:hover:text-emerald-400">
+            Conheça o método MOVE
+            <i data-lucide="arrow-down" class="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
+          </a>
+          <span class="hidden text-zinc-300 dark:text-zinc-700 sm:inline" aria-hidden="true">/</span>
+          <a href="#partners" class="inline-flex min-h-11 items-center gap-2 font-semibold text-zinc-800 underline-offset-4 hover:text-emerald-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-zinc-200 dark:hover:text-emerald-400">
+            Veja quem já trabalhou conosco
+            <i data-lucide="arrow-down" class="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
+          </a>
         </div>
       </section>
       <section id="partners" class="w-full bg-zinc-950 px-4 py-20 text-white sm:px-6 lg:py-24">
@@ -228,7 +228,7 @@ export function Home() {
               A Move Up transforma necessidades reais em <span class="text-emerald-600 dark:text-emerald-400">software sob medida.</span>
             </h2>
             <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 sm:text-xl">
-              Desenvolvemos aplicativos web, mobile e desktop, integrações e automações — sem enrolação, sem retrabalho e no prazo combinado.
+              Partimos do contexto da operação, organizamos as prioridades e construímos a solução adequada para colocar o projeto em produção.
             </p>
           </div>
 
@@ -361,7 +361,7 @@ export function Home() {
               Conte o que você quer colocar em <span class="text-emerald-600 dark:text-emerald-400">produção</span>
             </h2>
             <p class="mt-8 max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              Preencha os dados essenciais. Ao enviar, sua mensagem será preparada para continuar a conversa pelo WhatsApp.
+              Compartilhe o contexto essencial. Sua mensagem será preparada para continuar a conversa diretamente com a equipe Move Up pelo WhatsApp.
             </p>
 
             <div class="mt-10 border-t border-zinc-200 pt-6 dark:border-zinc-800">
@@ -377,29 +377,30 @@ export function Home() {
             <div class="grid gap-x-6 gap-y-8 sm:grid-cols-2">
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold">Nome</span>
-                <input type="text" name="name" autocomplete="name" required placeholder="Seu nome" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <input type="text" name="name" autocomplete="name" required placeholder="Seu nome" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
               </label>
 
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold">E-mail</span>
-                <input type="email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <input type="email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
               </label>
 
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold sm:min-h-10">WhatsApp/Telefone</span>
-                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required placeholder="(00) 00000-0000" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" minlength="10" required placeholder="(00) 00000-0000" aria-describedby="phone-hint" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <span id="phone-hint" class="mt-2 block text-sm text-zinc-500 dark:text-zinc-400">Inclua DDD ou código do país.</span>
               </label>
 
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold sm:min-h-10">Que tipo de projeto você tem em mente?</span>
-                <select name="projectType" required class="w-full rounded-md border border-zinc-300 bg-white px-4 py-3.5 text-zinc-950 outline-none transition hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 dark:border-zinc-700 dark:bg-black dark:text-white dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15">
+                <select name="projectType" required class="w-full rounded-md border border-zinc-300 bg-white px-4 py-3.5 text-zinc-950 outline-none transition hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:bg-black dark:text-white dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15">
                   <option value="">Selecione uma opção</option>
-                  <option>Web</option>
-                  <option>Mobile</option>
-                  <option>Desktop</option>
-                  <option>Integração</option>
-                  <option>Automação</option>
-                  <option>Consultoria</option>
+                  <option>Sistema ou portal web</option>
+                  <option>Aplicativo mobile</option>
+                  <option>Software para operação interna</option>
+                  <option>Integração entre sistemas</option>
+                  <option>Automação de processo</option>
+                  <option>Diagnóstico e consultoria</option>
                   <option>Não sei ainda</option>
                 </select>
               </label>
@@ -410,12 +411,16 @@ export function Home() {
               </label>
             </div>
 
+            <p class="mt-6 max-w-2xl text-sm leading-6 text-zinc-500 dark:text-zinc-400">
+              Nada é enviado por este site. Ao continuar, você revisa a mensagem no WhatsApp antes de enviá-la à equipe Move Up.
+            </p>
+
             <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <button type="submit" class="inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-emerald-600 px-6 py-3.5 font-semibold text-white outline-none transition-colors hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:bg-emerald-500 dark:text-black dark:hover:bg-emerald-400 dark:focus-visible:ring-emerald-400 dark:focus-visible:ring-offset-black">
                 Enviar pelo WhatsApp
                 <i data-lucide="send" class="h-5 w-5" aria-hidden="true"></i>
               </button>
-              <p id="contact-status" class="text-sm text-zinc-500 dark:text-zinc-400" role="status" aria-live="polite"></p>
+              <p id="contact-status" class="max-w-md text-sm leading-6 text-zinc-600 dark:text-zinc-400" role="status" aria-live="polite"></p>
             </div>
           </form>
         </div>

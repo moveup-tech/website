@@ -111,6 +111,50 @@ function setupHeaderScroll() {
 
 setupHeaderScroll();
 
+function setupSectionNavigation() {
+  const links = Array.from(
+    document.querySelectorAll<HTMLAnchorElement>("[data-section-link]"),
+  );
+  const sections = links
+    .map((link) => document.getElementById(link.dataset.sectionLink || ""))
+    .filter((section): section is HTMLElement => Boolean(section));
+
+  if (!links.length || !sections.length || !("IntersectionObserver" in window))
+    return;
+
+  const setCurrent = (id: string) => {
+    links.forEach((link) => {
+      if (link.dataset.sectionLink === id) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const visible = new Map<string, number>();
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          visible.set(entry.target.id, entry.intersectionRatio);
+        } else {
+          visible.delete(entry.target.id);
+        }
+      });
+
+      const current = [...visible.entries()].sort((a, b) => b[1] - a[1])[0];
+      if (current) setCurrent(current[0]);
+    },
+    { rootMargin: "-20% 0px -55%", threshold: [0, 0.2, 0.5, 0.8] },
+  );
+
+  sections.forEach((section) => observer.observe(section));
+  setCurrent(window.location.hash.slice(1) || "home");
+}
+
+setupSectionNavigation();
+
 function setupMobileMenu() {
   const header = document.querySelector<HTMLElement>(".site-header");
   const trigger = document.querySelector<HTMLButtonElement>(
@@ -293,12 +337,33 @@ function setupContactForm() {
 
   if (!form || !status) return;
 
+  const fields = Array.from(
+    form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(
+      "input, select, textarea",
+    ),
+  );
+
+  const syncValidity = (field: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) => {
+    field.setAttribute("aria-invalid", String(!field.validity.valid));
+  };
+
+  fields.forEach((field) => {
+    field.addEventListener("input", () => {
+      syncValidity(field);
+      if (form.checkValidity()) status.textContent = "";
+    });
+    field.addEventListener("change", () => syncValidity(field));
+  });
+
   form.addEventListener("submit", (event) => {
     event.preventDefault();
 
     if (!form.checkValidity()) {
-      form.reportValidity();
-      status.textContent = "Revise os campos obrigatórios antes de enviar.";
+      fields.forEach(syncValidity);
+      const firstInvalid = fields.find((field) => !field.validity.valid);
+      status.textContent = "Há um campo incompleto ou inválido. Revise o campo destacado para continuar.";
+      firstInvalid?.focus();
+      firstInvalid?.reportValidity();
       return;
     }
 
@@ -313,11 +378,29 @@ function setupContactForm() {
       `Descrição: ${data.get("description") || "Não informada"}`,
     ].join("\n");
 
-    status.textContent = "Abrindo sua conversa no WhatsApp…";
-    window.open(
-      `https://wa.me/5541999320954?text=${encodeURIComponent(message)}`,
+    const whatsappUrl = `https://wa.me/5541999320954?text=${encodeURIComponent(message)}`;
+    const conversation = window.open(
+      whatsappUrl,
       "_blank",
-      "noopener,noreferrer",
+    );
+
+    if (conversation) {
+      conversation.opener = null;
+      status.textContent = "Conversa aberta. Revise a mensagem no WhatsApp antes de enviar.";
+      return;
+    }
+
+    status.replaceChildren(
+      "O navegador bloqueou a nova janela. ",
+      Object.assign(document.createElement("a"), {
+        href: whatsappUrl,
+        target: "_blank",
+        rel: "noopener noreferrer",
+        textContent: "Abrir o WhatsApp manualmente",
+        className:
+          "font-semibold text-emerald-700 underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-emerald-400",
+      }),
+      ".",
     );
   });
 }
