@@ -209,6 +209,15 @@ section[id] {
   transform: translateX(0.3rem);
 }
 
+#process h2 {
+  padding-bottom: 0.15em;
+  margin-bottom: -0.15em;
+}
+
+.process-timeline-step {
+  z-index: 2;
+}
+
 .process-timeline::before {
   position: absolute;
   top: 1.5rem;
