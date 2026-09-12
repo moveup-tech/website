@@ -46,7 +46,7 @@ const renderPartner = (partner: Partner) => {
   const page = safeExternalUrl(partner.page || "");
   const logo = partner.logo?.[0];
   const logoUrl = getPartnerMediaUrl(logo?.url || "");
-  const name = partner.name || "Cliente Move Up";
+  const name = partner.name || "Cliente Moveup";
 
   return /* html */ `
     <li class="min-w-0 border-zinc-800 sm:border-r sm:[&:nth-child(2n)]:border-r-0 lg:[&:nth-child(2n)]:border-r lg:[&:nth-child(4n)]:border-r-0">
@@ -99,10 +99,12 @@ async function loadPartners() {
 }
 
 const renderTestimonial = (testimonial: Testimonial) => {
-  const partnerName = testimonial.partner?.name || "Cliente Move Up";
+  const partnerName = testimonial.partner?.name || "Cliente Moveup";
   const partnerPage = safeExternalUrl(testimonial.partner?.page || "");
-  const contactName = testimonial.contact?.name || testimonial.contactName || "";
-  const contactRole = testimonial.contact?.role || testimonial.contactRole || "";
+  const contactName =
+    testimonial.contact?.name || testimonial.contactName || "";
+  const contactRole =
+    testimonial.contact?.role || testimonial.contactRole || "";
   const displayName = contactName || partnerName;
   const rating = Math.min(5, Math.max(0, Number(testimonial.rating) || 0));
   const tags = testimonial.tags
@@ -254,7 +256,7 @@ export function Home() {
             </h2>
           </div>
 
-          <ul id="partner-list" class="grid grid-cols-1 border-b border-zinc-800 sm:grid-cols-2 lg:grid-cols-4" aria-label="Clientes da Move Up Tecnologia" aria-live="polite" aria-busy="true">
+          <ul id="partner-list" class="grid grid-cols-1 border-b border-zinc-800 sm:grid-cols-2 lg:grid-cols-4" aria-label="Clientes da Moveup Tecnologia" aria-live="polite" aria-busy="true">
             <li class="px-5 py-10 text-zinc-400 sm:col-span-2 lg:col-span-4">Carregando clientes…</li>
           </ul>
         </div>
@@ -263,7 +265,7 @@ export function Home() {
         <div class="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[minmax(0,1.35fr)_minmax(19rem,0.65fr)] lg:gap-24">
           <div class="max-w-4xl">
             <h2 class="max-w-3xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
-              A Move Up transforma necessidades reais em <span class="text-emerald-600 dark:text-emerald-400">software sob medida.</span>
+              A Moveup transforma necessidades reais em <span class="text-emerald-600 dark:text-emerald-400">software sob medida.</span>
             </h2>
             <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 sm:text-xl">
               Partimos do contexto da operação, organizamos as prioridades e construímos a solução adequada para colocar o projeto em produção.
@@ -274,7 +276,7 @@ export function Home() {
             <p class="text-sm font-semibold uppercase tracking-[0.14em] text-zinc-500 dark:text-zinc-400">
               O que desenvolvemos
             </p>
-            <ul class="mt-6 divide-y divide-zinc-200 dark:divide-zinc-800" aria-label="Serviços da Move Up Tecnologia">
+            <ul class="mt-6 divide-y divide-zinc-200 dark:divide-zinc-800" aria-label="Serviços da Moveup Tecnologia">
               <li class="flex items-center gap-4 py-4 first:pt-0">
                 <i data-lucide="panels-top-left" class="h-5 w-5 shrink-0 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
                 <span class="font-medium">Aplicações web e desktop</span>
@@ -340,7 +342,7 @@ export function Home() {
             </div>
           </div>
 
-          <ol class="production-sequence border-t border-zinc-800" aria-label="Serviços oferecidos pela Move Up Tecnologia">
+          <ol class="production-sequence border-t border-zinc-800" aria-label="Serviços oferecidos pela Moveup Tecnologia">
             <li data-service-step class="group relative grid gap-4 border-b border-zinc-800 py-8 md:grid-cols-[3rem_minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
               <span class="font-mono text-sm tabular-nums text-emerald-400" aria-hidden="true">01</span>
               <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Desenvolvimento Web</h3>
@@ -382,7 +384,7 @@ export function Home() {
                 O resultado contado por quem <span class="text-emerald-600 dark:text-emerald-400">viveu o projeto</span>
               </h2>
               <p class="mt-8 max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-                Experiências reais de clientes que trabalharam diretamente com a Move Up.
+                Experiências reais de clientes que trabalharam diretamente com a Moveup.
               </p>
             </div>
           </div>
@@ -399,7 +401,7 @@ export function Home() {
               Conte o que você quer colocar em <span class="text-emerald-600 dark:text-emerald-400">produção</span>
             </h2>
             <p class="mt-8 max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              Compartilhe o contexto essencial. Sua mensagem será preparada para continuar a conversa diretamente com a equipe Move Up pelo WhatsApp.
+              Compartilhe o contexto essencial. Sua mensagem será preparada para continuar a conversa diretamente com a equipe Moveup pelo WhatsApp.
             </p>
 
             <div class="mt-10 border-t border-zinc-200 pt-6 dark:border-zinc-800">
@@ -450,7 +452,7 @@ export function Home() {
             </div>
 
             <p class="mt-6 max-w-2xl text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-              Nada é enviado por este site. Ao continuar, você revisa a mensagem no WhatsApp antes de enviá-la à equipe Move Up.
+              Nada é enviado por este site. Ao continuar, você revisa a mensagem no WhatsApp antes de enviá-la à equipe Moveup.
             </p>
 
             <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
