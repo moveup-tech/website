@@ -7,6 +7,7 @@ p0_count: 0
 p1_count: 2
 timestamp: 2026-09-03T12-53-25Z
 slug: src-pages-home-ts
+closed: true
 ---
 # Impeccable Critique — Homepage
 

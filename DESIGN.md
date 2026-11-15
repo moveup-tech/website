@@ -64,9 +64,24 @@ components:
     textColor: "{colors.emerald-signal}"
     rounded: "{rounded.md}"
     padding: "1rem 1.5rem"
+  button-primary-solid:
+    backgroundColor: "{colors.emerald-action}"
+    textColor: "{colors.canvas}"
+    rounded: "{rounded.md}"
+    padding: "1rem 1.5rem"
+  button-primary-solid-hover:
+    backgroundColor: "#059669"
+    textColor: "{colors.canvas}"
+    rounded: "{rounded.md}"
+    padding: "1rem 1.5rem"
   status-chip:
     backgroundColor: "{colors.canvas}"
     textColor: "{colors.ink}"
+    rounded: "{rounded.lg}"
+    padding: "0.5rem 1rem"
+  status-chip-on-media:
+    backgroundColor: "rgb(0 0 0 / 0.4)"
+    textColor: "{colors.canvas}"
     rounded: "{rounded.lg}"
     padding: "0.5rem 1rem"
 ---
@@ -96,7 +111,7 @@ A paleta é quase monocromática; cores saturadas aparecem como sinais pequenos 
 ### Primary
 
 - **Sinal Esmeralda:** indica produção, capacidade, ação, numeração e ícones que orientam a leitura.
-- **Ação Esmeralda Profunda:** cria o fundo translúcido do botão principal e ganha densidade no hover.
+- **Ação Esmeralda Profunda:** cria o fundo translúcido do botão principal e ganha densidade no hover; na variante sólida do hero, preenche o botão por inteiro com texto branco.
 
 ### Secondary
 
@@ -166,17 +181,28 @@ As formas são discretamente arredondadas em controles compactos, enquanto seç�
 Contidos, técnicos e seguros: o botão destaca a ação por cor e densidade, não por volume.
 
 - **Shape:** cantos moderadamente curvos e largura ajustada ao conteúdo.
-- **Primary:** fundo esmeralda profundo translúcido, texto em esmeralda luminoso e padding horizontal generoso.
-- **Hover / Focus:** o hover aumenta a opacidade do fundo com transição de cor curta; o foco deve permanecer claramente visível sem alterar a geometria.
+- **Primary (soft, padrão):** fundo esmeralda profundo translúcido, texto em esmeralda luminoso e padding horizontal generoso. Usado no cabeçalho e em ações secundárias de destaque.
+- **Primary (solid):** fundo esmeralda profundo sólido e texto branco (contraste AA). Reservado à ação principal sobre mídia escurecida, como o CTA do hero, onde a variante translúcida perde presença. Exposto como `variant: "solid"` no componente `Button`.
+- **Hover / Focus:** o hover aumenta a opacidade do fundo (soft) ou clareia um tom do esmeralda (solid) com transição de cor curta; o foco deve permanecer claramente visível sem alterar a geometria.
 - **Icon support:** ícones lineares podem aparecer antes ou depois do texto, sempre alinhados pelo centro.
 
 ### Navigation
 
-O cabeçalho é fixo e translúcido sobre uma base preta. O logotipo ancora a esquerda; links claros ocupam o centro e a ação principal fecha a composição. O estado ativo troca o texto para esmeralda. Em adaptações móveis, preserve logotipo e ação principal e compacte ou recolha os links sem quebrar a primeira viewport.
+O cabeçalho é fixo. No topo da página ele é transparente sobre o hero escuro; após 200px de rolagem ganha fundo sólido em tinta quase preta e uma regra inferior, com transição suave de cor. Com o menu mobile aberto ele também fica sólido. O logotipo ancora a esquerda, os links claros ocupam o centro e o seletor de tema fecha a composição. O cabeçalho não tem botão de contato: a ação principal vive no hero e nas seções. O estado ativo troca o texto para esmeralda. Em adaptações móveis, preserve logotipo e seletor de tema e recolha os links no menu, sem quebrar a primeira viewport.
+
+### Theme Switch
+
+Controle segmentado em pílula com três ícones lineares: claro, escuro e sistema. Tem borda branca a 10% e fundo branco a 5%. Um indicador circular zinc desliza até a opção ativa, sem animação com `prefers-reduced-motion`. Semântica de `radiogroup`: só a opção ativa entra no Tab, e as setas trocam a seleção.
 
 ### Status Chip
 
 Um badge compacto combina borda zinc suave, superfície contrastante, texto pequeno e um ponto esmeralda pulsante. É reservado a mensagens curtas de disponibilidade ou posicionamento, nunca a parágrafos.
+
+Sobre mídia escurecida (hero), o chip inverte: superfície preta translúcida com leve desfoque, borda branca a 15% e texto branco.
+
+### Hero
+
+O hero é uma superfície escura nos dois temas: um vídeo de pessoas trabalhando em escritório, sem som, em loop e com `object-cover`, ocupa toda a seção sob uma camada preta de alta opacidade que garante contraste para o texto claro. A mídia é ambiente, nunca conteúdo: não tem controles, fica oculta para leitores de tela e some com `prefers-reduced-motion`, deixando apenas o fundo escuro. Textos usam branco e zinc claro; o esmeralda segue restrito à palavra destacada, aos ícones e ao CTA sólido.
 
 ### Capability List
 

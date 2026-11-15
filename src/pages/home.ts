@@ -188,25 +188,25 @@ const processSteps = [
     letter: "M",
     title: "Mapear",
     description:
-      "Entender o problema, os objetivos, os usuários e as necessidades do projeto.",
+      "Conversamos com você e entendemos o processo como ele é hoje, com todas as gambiarras.",
   },
   {
     letter: "O",
     title: "Organizar",
     description:
-      "Definir escopo, prioridades, critérios de aceite e planejamento.",
+      "Mostramos onde está o desperdício de tempo e o que dá pra automatizar.",
   },
   {
     letter: "V",
     title: "Viabilizar",
     description:
-      "Transformar o planejamento em produto, desenvolvendo e validando cada entrega.",
+      "Você recebe uma proposta clara: o que será feito, quanto custa e quanto tempo leva.",
   },
   {
     letter: "E",
     title: "Entregar",
     description:
-      "Publicar com segurança, validar a operação e preparar as próximas evoluções.",
+      "A gente desenvolve, testa com você e coloca pra rodar.",
   },
 ];
 
@@ -217,35 +217,50 @@ export function Home() {
   return /* html*/ `
     ${Header()}
     <main class="w-full">
-      <section id="home" class="mx-auto flex min-h-screen w-full max-w-7xl flex-col items-center justify-center px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-36">
-        <div class="mb-6 flex w-fit items-center gap-2 rounded-lg border border-zinc-200 bg-white px-4 py-2 dark:border-zinc-800 dark:bg-zinc-900">
-          <div class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></div>
-          <small class="text-xs text-black dark:text-white">
-            Desenvolvimento de software sob medida.
-          </small>
-        </div>
-        <h1 class="mb-6 max-w-6xl text-center text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-black text-balance dark:text-white sm:mb-8 sm:text-5xl lg:text-6xl">
-          Sua ideia vira sistema. Seu processo vira automação. Seu negócio entra em <em class="text-emerald-600 dark:text-emerald-400">movimento</em>.
-        </h1>
-        <p class="mt-4 max-w-3xl text-center text-base leading-7 text-zinc-700 dark:text-zinc-400 sm:text-lg sm:leading-8">
-          Desenvolvemos aplicativos, sistemas, integrações e automações sob medida, organizando cada projeto do problema real à entrega em produção.
-        </p>
-        <div class="mt-10 flex w-full flex-col items-center p-4 sm:mt-16">
-          ${Button({ title: "Solicitar orçamento gratuito", href: "#contact" })}
-          <small class="mt-4 text-center text-sm text-zinc-600 dark:text-zinc-400">
-            Conte o contexto primeiro. A conversa começa sem compromisso.
-          </small>
-        </div>
-        <div class="mt-8 flex w-full max-w-3xl flex-col items-center justify-center gap-3 border-t border-zinc-200 pt-6 text-sm text-zinc-600 dark:border-zinc-900 dark:text-zinc-400 sm:mt-12 sm:flex-row sm:gap-8">
-          <a href="#process" class="inline-flex min-h-11 items-center gap-2 font-semibold text-zinc-800 underline-offset-4 hover:text-emerald-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-zinc-200 dark:hover:text-emerald-400">
-            Conheça o método MOVE
-            <i data-lucide="arrow-down" class="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
-          </a>
-          <span class="hidden text-zinc-300 dark:text-zinc-700 sm:inline" aria-hidden="true">/</span>
-          <a href="#partners" class="inline-flex min-h-11 items-center gap-2 font-semibold text-zinc-800 underline-offset-4 hover:text-emerald-700 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500 dark:text-zinc-200 dark:hover:text-emerald-400">
-            Veja quem já trabalhou conosco
-            <i data-lucide="arrow-down" class="h-4 w-4 text-emerald-600 dark:text-emerald-400" aria-hidden="true"></i>
-          </a>
+      <section id="home" class="relative isolate w-full overflow-hidden bg-zinc-950">
+        <video
+          class="absolute inset-0 -z-20 h-full w-full object-cover motion-reduce:hidden"
+          src="https://videos.pexels.com/video-files/4629264/4629264-hd_1280_720_25fps.mp4"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          disablepictureinpicture
+          aria-hidden="true"
+          tabindex="-1"
+        ></video>
+        <div class="absolute inset-0 -z-10 bg-black/70" aria-hidden="true"></div>
+        <div class="hero-content mx-auto flex min-h-svh w-full max-w-7xl flex-col items-center justify-center px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-36">
+          <div class="mb-6 flex w-fit items-center gap-2 rounded-lg border border-white/15 bg-black/40 px-4 py-2 backdrop-blur-sm">
+            <div class="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" aria-hidden="true"></div>
+            <small class="text-xs text-white">
+              Desenvolvimento de software sob medida.
+            </small>
+          </div>
+          <h1 class="mb-6 max-w-6xl text-center text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-white text-balance sm:mb-8 sm:text-5xl lg:text-6xl">
+            Todos os dados da empresa num <em class="text-emerald-400">lugar só</em>
+          </h1>
+          <p class="mt-4 max-w-3xl text-center text-base leading-7 text-zinc-300 sm:text-lg sm:leading-8">
+            Criamos automações e sistemas sob medida para pequenas e médias empresas. Você explica como trabalha hoje. A gente transforma isso em um processo que roda sozinho.
+          </p>
+          <div class="mt-10 flex w-full flex-col items-center p-4 sm:mt-16">
+            ${Button({ title: "Agendar diagnóstico gratuito", href: "#contact", variant: "solid" })}
+            <small class="mt-4 text-center text-sm text-zinc-300">
+              Gratuito • Sem compromisso
+            </small>
+          </div>
+          <div class="mt-8 flex w-full max-w-3xl flex-col items-center justify-center gap-3 border-t border-white/15 pt-6 text-sm text-zinc-300 sm:mt-12 sm:flex-row sm:gap-8">
+            <a href="#process" class="inline-flex min-h-11 items-center gap-2 font-semibold text-zinc-100 underline-offset-4 hover:text-emerald-400 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500">
+              Conheça o método MOVE
+              <i data-lucide="arrow-down" class="h-4 w-4 text-emerald-400" aria-hidden="true"></i>
+            </a>
+            <span class="hidden text-zinc-500 sm:inline" aria-hidden="true">/</span>
+            <a href="#partners" class="inline-flex min-h-11 items-center gap-2 font-semibold text-zinc-100 underline-offset-4 hover:text-emerald-400 hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-emerald-500">
+              Veja quem já trabalhou conosco
+              <i data-lucide="arrow-down" class="h-4 w-4 text-emerald-400" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
       </section>
       <section id="partners" class="w-full bg-zinc-950 px-4 py-20 text-white sm:px-6 lg:py-24">
@@ -265,10 +280,13 @@ export function Home() {
         <div class="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[minmax(0,1.35fr)_minmax(19rem,0.65fr)] lg:gap-24">
           <div class="max-w-4xl">
             <h2 class="max-w-3xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
-              A Moveup transforma necessidades reais em <span class="text-emerald-600 dark:text-emerald-400">software sob medida.</span>
+              Não é falta de esforço. É que o negócio cresceu e as ferramentas <span class="text-emerald-600 dark:text-emerald-400">ficaram pra trás.</span>
             </h2>
             <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 sm:text-xl">
-              Partimos do contexto da operação, organizamos as prioridades e construímos a solução adequada para colocar o projeto em produção.
+              Uma planilha pra estoque. Outra pro financeiro. Um sistema que não conversa com o outro. E você copiando dado de um lado pro outro.
+            </p>
+            <p class="mt-6 max-w-2xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 sm:text-xl">
+              A Moveup organiza essa bagunça. Mapeamos como sua empresa funciona e criamos a solução certa: uma automação, um sistema ou um app. Tudo explicado em português claro, sem tecnês.
             </p>
           </div>
 
@@ -293,16 +311,57 @@ export function Home() {
           </div>
         </div>
       </section>
+      <section id="pain" class="w-full bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
+        <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
+          <div>
+            <div class="lg:sticky lg:top-32">
+              <h2 class="max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
+                Você conhece alguma <span class="text-emerald-400">dessas situações?</span>
+              </h2>
+              <p class="mt-8 max-w-md text-lg leading-8 text-zinc-400">
+                Se você é dono de empresa, provavelmente conhece pelo menos uma.
+              </p>
+            </div>
+          </div>
+
+          <ul class="border-t border-zinc-800" aria-label="Situações comuns em empresas que cresceram">
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="circle-alert" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Você perde horas por semana digitando a mesma informação em lugares diferentes</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="circle-alert" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Precisa de um número e não sabe em qual planilha ele está</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="circle-alert" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Paga vários sistemas e nenhum mostra a empresa inteira</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="circle-alert" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Um erro de fórmula já te custou dinheiro ou um cliente</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="circle-alert" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Só uma pessoa sabe onde está cada coisa, e se ela falta, tudo para</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="circle-alert" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Você queria pensar no crescimento, mas passa o dia apagando incêndio</span>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section id="process" class="w-full bg-zinc-100 px-4 py-24 text-zinc-950 dark:bg-zinc-900 dark:text-white sm:px-6 lg:py-32">
         <div class="mx-auto w-full max-w-7xl">
           <div class="grid gap-8 border-b border-zinc-300 pb-10 dark:border-zinc-700 lg:grid-cols-[minmax(0,1.25fr)_minmax(20rem,0.75fr)] lg:items-end">
             <div>
               <h2 class="max-w-3xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
-                Um caminho claro até a <span class="text-emerald-600 dark:text-emerald-400">entrega</span>
+                Conheça o <span class="text-emerald-600 dark:text-emerald-400">Método MOVE</span>
               </h2>
             </div>
             <p class="process-intro max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400 lg:justify-self-end">
-              O método MOVE organiza cada projeto em quatro etapas conectadas, da descoberta à produção.
+              A gente não começa escrevendo código. Primeiro a gente entende sua operação.
             </p>
           </div>
 
@@ -327,6 +386,52 @@ export function Home() {
               .join("")}
             </ol>
           </div>
+
+          <p class="mt-14 max-w-xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+            Você sabe o que está acontecendo em cada etapa, sem surpresa no meio do caminho.
+          </p>
+        </div>
+      </section>
+      <section id="benefits" class="w-full bg-white px-4 py-24 text-zinc-950 dark:bg-black dark:text-white sm:px-6 lg:py-32">
+        <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
+          <div>
+            <div class="lg:sticky lg:top-32">
+              <h2 class="max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
+                O que muda na <span class="text-emerald-600 dark:text-emerald-400">sua empresa</span>
+              </h2>
+            </div>
+          </div>
+
+          <ul class="border-t border-zinc-200 dark:border-zinc-800" aria-label="Benefícios">
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Horas de volta na sua semana</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">A tarefa repetida passa a ser feita pelo sistema.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Uma fonte única da verdade</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Chega de procurar em qual planilha está o número certo.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Menos erro humano</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">O que é automático não esquece nem digita errado.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Decisões com dado na mão</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Você enxerga o negócio sem montar relatório na raça.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">A empresa não depende de uma pessoa</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">O processo fica no sistema, não na cabeça de alguém.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Feito pro seu jeito de trabalhar</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Sem precisar se adaptar a um software genérico.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Funciona no computador e no celular</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Web, Android e iOS.</p>
+            </li>
+          </ul>
         </div>
       </section>
       <section id="services" class="w-full bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
@@ -386,6 +491,9 @@ export function Home() {
               <p class="mt-8 max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
                 Experiências reais de clientes que trabalharam diretamente com a Moveup.
               </p>
+              <p class="mt-6 max-w-md text-sm font-semibold text-zinc-700 dark:text-zinc-300">
+                4 projetos entregues • Nota 5.0 em todas as avaliações no Workana
+              </p>
             </div>
           </div>
 
@@ -394,14 +502,119 @@ export function Home() {
           </div>
         </div>
       </section>
+      <section id="offer" class="w-full bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
+        <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
+          <div>
+            <div class="lg:sticky lg:top-32">
+              <h2 class="max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
+                O que você leva do <span class="text-emerald-400">diagnóstico gratuito</span>
+              </h2>
+              <p class="mt-8 max-w-md text-lg leading-8 text-zinc-400">
+                <strong class="font-semibold text-white">Investimento: R$ 0.</strong> Você sai da conversa sabendo o próximo passo, contrate a gente ou não.
+              </p>
+              <p class="mt-6 max-w-md text-lg leading-8 text-zinc-400">
+                Se depois do diagnóstico você não quiser seguir, tudo bem. O mapa do seu processo é seu.
+              </p>
+              <div class="mt-10">
+                ${Button({ title: "Agendar diagnóstico gratuito", href: "#contact", variant: "solid" })}
+              </div>
+            </div>
+          </div>
+
+          <ul class="border-t border-zinc-800" aria-label="O que você leva do diagnóstico gratuito">
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="check" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Mapa do seu processo atual: onde o tempo está indo embora</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="check" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Lista do que dá pra automatizar, por ordem de impacto</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="check" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Recomendação honesta: às vezes a solução é simples (e às vezes nem precisa da gente)</span>
+            </li>
+            <li class="flex items-start gap-4 border-b border-zinc-800 py-6 lg:py-8">
+              <i data-lucide="check" class="mt-1.5 h-5 w-5 shrink-0 text-emerald-400" aria-hidden="true"></i>
+              <span class="text-lg leading-8 text-zinc-300">Estimativa de prazo e investimento, sem compromisso</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="objections" class="w-full bg-white px-4 py-24 text-zinc-950 dark:bg-black dark:text-white sm:px-6 lg:py-32">
+        <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
+          <div>
+            <div class="lg:sticky lg:top-32">
+              <h2 class="max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
+                Talvez você esteja <span class="text-emerald-600 dark:text-emerald-400">pensando</span>
+              </h2>
+            </div>
+          </div>
+
+          <ul class="border-t border-zinc-200 dark:border-zinc-800" aria-label="Dúvidas e objeções comuns">
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">“Mas software sob medida é caro…”</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Entendo. Antes de olhar o preço, vale fazer uma conta: quantas horas por semana sua equipe gasta em tarefa manual? Multiplica pelo custo da hora e por 12 meses. Na maioria das vezes, continuar como está sai mais caro. O diagnóstico existe justamente pra fazer essa conta com você.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">“Mas minha empresa é pequena demais pra isso…”</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">É exatamente pra empresa pequena que a gente trabalha. Não precisa ser um sistemão: às vezes uma automação resolve 80% da dor.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">“Mas eu não entendo nada de tecnologia…”</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">E nem precisa. Você entende do seu negócio e a gente cuida da parte técnica. Tudo explicado sem tecnês.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-200 py-8 dark:border-zinc-800 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">“Mas já tentei um sistema e não deu certo…”</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Sistemas prontos obrigam você a mudar o jeito de trabalhar. A gente faz o contrário: o sistema se adapta ao seu processo, porque começa mapeando ele.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section id="faq" class="w-full bg-zinc-100 px-4 py-24 text-zinc-950 dark:bg-zinc-900 dark:text-white sm:px-6 lg:py-32">
+        <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
+          <div>
+            <div class="lg:sticky lg:top-32">
+              <h2 class="max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
+                Perguntas <span class="text-emerald-600 dark:text-emerald-400">frequentes</span>
+              </h2>
+            </div>
+          </div>
+
+          <ul class="border-t border-zinc-300 dark:border-zinc-700" aria-label="Perguntas frequentes">
+            <li class="grid gap-3 border-b border-zinc-300 py-8 dark:border-zinc-700 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Quanto custa um projeto?</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Depende do tamanho do problema. Uma automação simples custa bem menos que um app completo. No diagnóstico você recebe uma estimativa clara antes de decidir qualquer coisa.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-300 py-8 dark:border-zinc-700 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Quanto do meu tempo vou precisar dedicar?</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Uma conversa no diagnóstico e alguns check-ins curtos durante o projeto. O trabalho pesado é com a gente.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-300 py-8 dark:border-zinc-700 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Serve pra empresa pequena?</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Serve. A Moveup trabalha justamente com pequenas e médias empresas.</p>
+            </li>
+            <li class="grid gap-3 border-b border-zinc-300 py-8 dark:border-zinc-700 md:grid-cols-[minmax(10rem,0.65fr)_minmax(0,1.35fr)] md:gap-6 lg:py-10">
+              <h3 class="text-xl font-semibold tracking-[-0.02em] sm:text-2xl">Preciso entender de tecnologia?</h3>
+              <p class="max-w-2xl leading-7 text-zinc-600 dark:text-zinc-400">Não. Você fala do seu negócio e a gente traduz em solução.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
       <section id="contact" class="w-full bg-white px-4 py-24 text-zinc-950 dark:bg-black dark:text-white sm:px-6 lg:py-32">
         <div class="mx-auto grid w-full max-w-7xl gap-16 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
           <div>
             <h2 class="max-w-xl text-4xl font-bold leading-[1.05] tracking-[-0.035em] text-balance sm:text-5xl lg:text-6xl">
-              Conte o que você quer colocar em <span class="text-emerald-600 dark:text-emerald-400">produção</span>
+              Esse é o primeiro passo, e ele é <span class="text-emerald-600 dark:text-emerald-400">gratuito</span>
             </h2>
             <p class="mt-8 max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-              Compartilhe o contexto essencial. Sua mensagem será preparada para continuar a conversa diretamente com a equipe Moveup pelo WhatsApp.
+              Imagine abrir o computador na segunda-feira e encontrar tudo atualizado. Sem planilha pra conferir. Sem dado pra copiar. Só a informação certa, na hora certa.
+            </p>
+            <p class="mt-6 max-w-md text-sm font-semibold text-zinc-700 dark:text-zinc-300">
+              Gratuito • Sem compromisso • Conversa sem tecnês
+            </p>
+            <p class="mt-8 max-w-md leading-7 text-zinc-600 dark:text-zinc-400">
+              <strong class="font-semibold text-zinc-950 dark:text-white">PS:</strong> Cada semana com processo manual são mais algumas horas que não voltam. O diagnóstico é gratuito e você sai dele com um mapa do que dá pra melhorar, contratando a gente ou não.
             </p>
 
             <div class="mt-10 border-t border-zinc-200 pt-6 dark:border-zinc-800">
@@ -457,7 +670,7 @@ export function Home() {
 
             <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
               <button type="submit" class="inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-emerald-600 px-6 py-3.5 font-semibold text-white outline-none transition-colors hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:bg-emerald-500 dark:text-black dark:hover:bg-emerald-400 dark:focus-visible:ring-emerald-400 dark:focus-visible:ring-offset-black">
-                Enviar pelo WhatsApp
+                Agendar meu diagnóstico
                 <i data-lucide="send" class="h-5 w-5" aria-hidden="true"></i>
               </button>
               <p id="contact-status" class="max-w-md text-sm leading-6 text-zinc-600 dark:text-zinc-400" role="status" aria-live="polite"></p>

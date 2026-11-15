@@ -52,7 +52,10 @@ export function Footer() {
         </div>
 
         <div class="mt-16 flex flex-col gap-3 border-t border-zinc-800 pt-6 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© ${currentYear} Move Up Tecnologia. Todos os direitos reservados.</p>
+          <div class="space-y-1">
+            <p>© ${currentYear} Move Up Tecnologia. Todos os direitos reservados.</p>
+            <p>CNPJ <span class="tabular-nums">70.104.249/0001-22</span></p>
+          </div>
           <p>Desenvolvimento de software sob medida.</p>
         </div>
       </div>

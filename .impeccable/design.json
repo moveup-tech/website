@@ -41,6 +41,14 @@
       "css": ".ds-btn-primary { width: fit-content; border: 0; border-radius: .375rem; padding: 1rem 1.5rem; background: rgb(4 120 87 / .25); color: #34d399; font: 400 .875rem/1.25 ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 300ms ease; } .ds-btn-primary:hover { background: rgb(4 120 87 / .5); } .ds-btn-primary:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; } .ds-btn-primary:active { background: rgb(4 120 87 / .65); }"
     },
     {
+      "name": "Primary Button Solid",
+      "kind": "button",
+      "refersTo": "button-primary-solid",
+      "description": "Ação principal sólida para uso sobre mídia escurecida, como o CTA do hero.",
+      "html": "<button class=\"ds-btn-solid\">Solicitar orçamento gratuito</button>",
+      "css": ".ds-btn-solid { width: fit-content; border: 0; border-radius: .375rem; padding: 1rem 1.5rem; background: #047857; color: #fff; font: 400 .875rem/1.25 ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 300ms ease; } .ds-btn-solid:hover { background: #059669; } .ds-btn-solid:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; }"
+    },
+    {
       "name": "Dark Navigation",
       "kind": "nav",
       "description": "Navegação fixa, clara sobre superfície preta translúcida.",

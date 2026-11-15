@@ -9,16 +9,17 @@ createIcons({ icons });
 type ThemePreference = "light" | "dark" | "system";
 
 function setupTheme() {
-  const trigger = document.querySelector<HTMLButtonElement>(
-    ".theme-menu-trigger",
-  );
-  const menu = document.querySelector<HTMLElement>("#theme-menu");
+  const switcher = document.querySelector<HTMLElement>(".theme-switch");
   const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
   const themeColor = document.querySelector<HTMLMetaElement>(
     'meta[name="theme-color"]',
   );
 
-  if (!trigger || !menu) return;
+  if (!switcher) return;
+
+  const options = Array.from(
+    switcher.querySelectorAll<HTMLButtonElement>("[data-theme-value]"),
+  );
 
   const getPreference = (): ThemePreference => {
     const stored = localStorage.getItem("moveup-theme");
@@ -35,53 +36,41 @@ function setupTheme() {
     document.documentElement.style.colorScheme = dark ? "dark" : "light";
     themeColor?.setAttribute("content", dark ? "#09090b" : "#ffffff");
 
-    document.querySelectorAll<HTMLElement>("[data-theme-icon]").forEach((icon) => {
-      icon.hidden = icon.dataset.themeIcon !== preference;
+    switcher.dataset.active = preference;
+    options.forEach((option) => {
+      const checked = option.dataset.themeValue === preference;
+      option.setAttribute("aria-checked", String(checked));
+      option.tabIndex = checked ? 0 : -1;
     });
-    menu.querySelectorAll<HTMLButtonElement>("[data-theme-value]").forEach((button) => {
-      button.setAttribute(
-        "aria-checked",
-        String(button.dataset.themeValue === preference),
-      );
-      button.setAttribute("role", "menuitemradio");
-    });
-    trigger.setAttribute(
-      "aria-label",
-      `Alterar tema. Atual: ${preference === "light" ? "claro" : preference === "dark" ? "escuro" : "sistema"}`,
-    );
   };
 
-  const setMenuOpen = (open: boolean) => {
-    trigger.setAttribute("aria-expanded", String(open));
-    menu.setAttribute("aria-hidden", String(!open));
-    menu.toggleAttribute("inert", !open);
-    menu.classList.toggle("is-open", open);
+  const select = (preference: ThemePreference) => {
+    localStorage.setItem("moveup-theme", preference);
+    applyTheme(preference);
   };
 
   applyTheme(getPreference());
 
-  trigger.addEventListener("click", () => {
-    setMenuOpen(trigger.getAttribute("aria-expanded") !== "true");
-  });
-  menu.querySelectorAll<HTMLButtonElement>("[data-theme-value]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const preference = button.dataset.themeValue as ThemePreference;
-      localStorage.setItem("moveup-theme", preference);
-      applyTheme(preference);
-      setMenuOpen(false);
-      trigger.focus();
+  options.forEach((option, index) => {
+    option.addEventListener("click", () => {
+      select(option.dataset.themeValue as ThemePreference);
+    });
+    option.addEventListener("keydown", (event) => {
+      const step =
+        event.key === "ArrowRight" || event.key === "ArrowDown"
+          ? 1
+          : event.key === "ArrowLeft" || event.key === "ArrowUp"
+            ? -1
+            : 0;
+      if (!step) return;
+      event.preventDefault();
+      const next = options[(index + step + options.length) % options.length];
+      select(next.dataset.themeValue as ThemePreference);
+      next.focus();
     });
   });
   systemTheme.addEventListener("change", () => {
     if (getPreference() === "system") applyTheme("system");
-  });
-  document.addEventListener("click", (event) => {
-    if (!trigger.parentElement?.contains(event.target as Node)) setMenuOpen(false);
-  });
-  document.addEventListener("keydown", (event) => {
-    if (event.key !== "Escape" || trigger.getAttribute("aria-expanded") !== "true") return;
-    setMenuOpen(false);
-    trigger.focus();
   });
 }
 
@@ -95,7 +84,7 @@ function setupHeaderScroll() {
   let ticking = false;
 
   const updateHeader = () => {
-    header.classList.toggle("is-scrolled", window.scrollY >= 100);
+    header.classList.toggle("is-scrolled", window.scrollY >= 200);
     ticking = false;
   };
 
@@ -216,19 +205,26 @@ function setupMotion() {
   const groups = [
     document.querySelectorAll<HTMLElement>("#partners h2, #partners li"),
     document.querySelectorAll<HTMLElement>(
-      "#about h2, #about h2 + p, #about ul > li",
+      "#about h2, #about h2 ~ p, #about ul > li",
     ),
     document.querySelectorAll<HTMLElement>(
-      "#process h2, #process .process-intro, #process [data-process-step]",
+      "#process h2, #process .process-intro, #process [data-process-step], #process .process-timeline-shell + p",
     ),
+    document.querySelectorAll<HTMLElement>("#pain h2, #pain h2 + p, #pain li"),
+    document.querySelectorAll<HTMLElement>("#benefits h2, #benefits li"),
     document.querySelectorAll<HTMLElement>(
       "#services h2, #services h2 + p",
     ),
     document.querySelectorAll<HTMLElement>(
-      "#contact h2, #contact h2 + p, #contact form",
+      "#contact h2, #contact h2 ~ p, #contact form",
     ),
     document.querySelectorAll<HTMLElement>(
-      "#testimonials h2, #testimonials h2 + p, #testimonials figure",
+      "#offer h2, #offer h2 ~ p, #offer h2 ~ div, #offer li",
+    ),
+    document.querySelectorAll<HTMLElement>("#objections h2, #objections li"),
+    document.querySelectorAll<HTMLElement>("#faq h2, #faq li"),
+    document.querySelectorAll<HTMLElement>(
+      "#testimonials h2, #testimonials h2 ~ p, #testimonials figure",
     ),
     document.querySelectorAll<HTMLElement>("footer [data-footer-group]"),
   ];

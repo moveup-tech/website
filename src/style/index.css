@@ -36,41 +36,34 @@ section[id] {
 .site-header {
   padding-top: env(safe-area-inset-top);
   border-bottom: 1px solid transparent;
-  background-color: color-mix(in srgb, #27272a 68%, transparent);
-  backdrop-filter: blur(12px) saturate(85%);
+  background-color: transparent;
   transition:
-    background-color 300ms var(--motion-ease-out),
-    border-color 300ms var(--motion-ease-out);
+    background-color 400ms var(--motion-ease-out),
+    border-color 400ms var(--motion-ease-out);
 }
 
-.site-header.is-scrolled {
-  border-bottom-color: color-mix(in srgb, #a1a1aa 18%, transparent);
-  background-color: color-mix(in srgb, #27272a 88%, transparent);
+.site-header.is-scrolled,
+.site-header:has(.mobile-menu.is-open) {
+  border-bottom-color: #27272a;
+  background-color: #09090b;
 }
 
-.theme-menu {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-0.35rem);
-  transition:
-    opacity 180ms ease,
-    transform 220ms var(--motion-ease-out),
-    visibility 0s linear 220ms;
+.theme-switch-indicator {
+  transition: transform 350ms var(--motion-ease-out);
 }
 
-.theme-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  transition:
-    opacity 180ms ease,
-    transform 220ms var(--motion-ease-out),
-    visibility 0s linear 0s;
+.theme-switch[data-active="dark"] .theme-switch-indicator {
+  transform: translateX(100%);
 }
 
-.theme-menu [aria-checked="true"] {
-  color: #34d399;
-  background-color: #27272a;
+.theme-switch[data-active="system"] .theme-switch-indicator {
+  transform: translateX(200%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-switch-indicator {
+    transition: none;
+  }
 }
 
 .mobile-menu {
@@ -106,28 +99,28 @@ section[id] {
   to {
     opacity: 1;
     filter: blur(0);
-    clip-path: inset(0);
+    clip-path: inset(0 0 -0.25em 0);
     transform: translateY(0);
   }
 }
 
-.motion-ready #home > * {
+.motion-ready #home .hero-content > * {
   animation: hero-arrival 800ms var(--motion-ease-out) both;
 }
 
-.motion-ready #home > :nth-child(2) {
+.motion-ready #home .hero-content > :nth-child(2) {
   animation-delay: 80ms;
 }
 
-.motion-ready #home > :nth-child(3) {
+.motion-ready #home .hero-content > :nth-child(3) {
   animation-delay: 150ms;
 }
 
-.motion-ready #home > :nth-child(4) {
+.motion-ready #home .hero-content > :nth-child(4) {
   animation-delay: 220ms;
 }
 
-.motion-ready #home > :nth-child(5) {
+.motion-ready #home .hero-content > :nth-child(5) {
   animation-delay: 290ms;
 }
 
