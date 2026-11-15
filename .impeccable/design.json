@@ -46,7 +46,7 @@
       "refersTo": "button-primary-solid",
       "description": "Ação principal sólida para uso sobre mídia escurecida, como o CTA do hero.",
       "html": "<button class=\"ds-btn-solid\">Solicitar orçamento gratuito</button>",
-      "css": ".ds-btn-solid { width: fit-content; border: 0; border-radius: .375rem; padding: 1rem 1.5rem; background: #047857; color: #fff; font: 400 .875rem/1.25 ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 300ms ease; } .ds-btn-solid:hover { background: #059669; } .ds-btn-solid:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; }"
+      "css": ".ds-btn-solid { width: fit-content; border: 0; border-radius: .375rem; padding: 1rem 1.5rem; background: #047857; color: #fff; font: 400 .875rem/1.25 ui-sans-serif, system-ui, sans-serif; cursor: pointer; transition: background-color 300ms ease; } .ds-btn-solid:hover { background: #065f46; } .ds-btn-solid:focus-visible { outline: 2px solid #34d399; outline-offset: 3px; }"
     },
     {
       "name": "Dark Navigation",

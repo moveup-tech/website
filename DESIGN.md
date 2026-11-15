@@ -70,7 +70,7 @@ components:
     rounded: "{rounded.md}"
     padding: "1rem 1.5rem"
   button-primary-solid-hover:
-    backgroundColor: "#059669"
+    backgroundColor: "#065f46"
     textColor: "{colors.canvas}"
     rounded: "{rounded.md}"
     padding: "1rem 1.5rem"
@@ -183,7 +183,7 @@ Contidos, técnicos e seguros: o botão destaca a ação por cor e densidade, n�
 - **Shape:** cantos moderadamente curvos e largura ajustada ao conteúdo.
 - **Primary (soft, padrão):** fundo esmeralda profundo translúcido, texto em esmeralda luminoso e padding horizontal generoso. Usado no cabeçalho e em ações secundárias de destaque.
 - **Primary (solid):** fundo esmeralda profundo sólido e texto branco (contraste AA). Reservado à ação principal sobre mídia escurecida, como o CTA do hero, onde a variante translúcida perde presença. Exposto como `variant: "solid"` no componente `Button`.
-- **Hover / Focus:** o hover aumenta a opacidade do fundo (soft) ou clareia um tom do esmeralda (solid) com transição de cor curta; o foco deve permanecer claramente visível sem alterar a geometria.
+- **Hover / Focus:** o hover aumenta a opacidade do fundo (soft) ou escurece um tom do esmeralda (solid), mantendo contraste AA com o texto branco com transição de cor curta; o foco deve permanecer claramente visível sem alterar a geometria.
 - **Icon support:** ícones lineares podem aparecer antes ou depois do texto, sempre alinhados pelo centro.
 
 ### Navigation

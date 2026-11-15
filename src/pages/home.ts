@@ -263,7 +263,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section id="partners" class="w-full bg-zinc-950 px-4 py-20 text-white sm:px-6 lg:py-24">
+      <section id="partners" class="w-full border-b border-zinc-800 bg-zinc-950 px-4 py-20 text-white sm:px-6 lg:py-24">
         <div class="mx-auto w-full max-w-7xl">
           <div class="border-b border-zinc-800 pb-10">
             <h2 class="max-w-2xl text-3xl font-bold leading-tight tracking-[-0.03em] sm:text-4xl">
@@ -311,7 +311,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section id="pain" class="w-full bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
+      <section id="pain" class="w-full border-y border-zinc-800 bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
         <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
           <div>
             <div class="lg:sticky lg:top-32">
@@ -376,7 +376,7 @@ export function Home() {
                       ${step.letter}
                     </div>
                     <div class="pt-0.5 lg:pt-8">
-                      <p class="font-mono text-xs tabular-nums text-zinc-500" aria-hidden="true">ETAPA 0${index + 1}</p>
+                      <p class="font-mono text-xs tabular-nums text-zinc-600 dark:text-zinc-400" aria-hidden="true">ETAPA 0${index + 1}</p>
                       <h3 class="mt-3 text-2xl font-semibold tracking-[-0.025em]">${step.title}</h3>
                       <p class="mt-4 max-w-sm leading-7 text-zinc-600 dark:text-zinc-400">${step.description}</p>
                     </div>
@@ -434,7 +434,7 @@ export function Home() {
           </ul>
         </div>
       </section>
-      <section id="services" class="w-full bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
+      <section id="services" class="w-full border-y border-zinc-800 bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
         <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
           <div>
             <div class="lg:sticky lg:top-32">
@@ -502,7 +502,7 @@ export function Home() {
           </div>
         </div>
       </section>
-      <section id="offer" class="w-full bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
+      <section id="offer" class="w-full border-y border-zinc-800 bg-zinc-950 px-4 py-24 text-white sm:px-6 lg:py-32">
         <div class="mx-auto grid w-full max-w-7xl gap-14 lg:grid-cols-[minmax(17rem,0.72fr)_minmax(0,1.28fr)] lg:gap-20">
           <div>
             <div class="lg:sticky lg:top-32">
@@ -630,17 +630,17 @@ export function Home() {
             <div class="grid gap-x-6 gap-y-8 sm:grid-cols-2">
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold">Nome</span>
-                <input type="text" name="name" autocomplete="name" required placeholder="Seu nome" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <input type="text" name="name" autocomplete="name" required placeholder="Seu nome" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-500 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-400 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
               </label>
 
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold">E-mail</span>
-                <input type="email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <input type="email" name="email" autocomplete="email" required placeholder="voce@empresa.com.br" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-500 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-400 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
               </label>
 
               <label class="block">
                 <span class="mb-3 block text-sm font-semibold sm:min-h-10">WhatsApp/Telefone</span>
-                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" minlength="10" required placeholder="(00) 00000-0000" aria-describedby="phone-hint" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
+                <input type="tel" name="phone" autocomplete="tel" inputmode="tel" minlength="10" required placeholder="(00) 00000-0000" aria-describedby="phone-hint" class="w-full rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-500 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 aria-[invalid=true]:border-red-600 aria-[invalid=true]:ring-2 aria-[invalid=true]:ring-red-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-400 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15" />
                 <span id="phone-hint" class="mt-2 block text-sm text-zinc-500 dark:text-zinc-400">Inclua DDD ou código do país.</span>
               </label>
 
@@ -660,7 +660,7 @@ export function Home() {
 
               <label class="block sm:col-span-2">
                 <span class="mb-3 block text-sm font-semibold">Conte brevemente sobre seu projeto <span class="font-normal text-zinc-500 dark:text-zinc-400">(opcional)</span></span>
-                <textarea name="description" rows="5" placeholder="Contexto, objetivo ou desafio principal" class="w-full resize-y rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-400 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-600 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15"></textarea>
+                <textarea name="description" rows="5" placeholder="Contexto, objetivo ou desafio principal" class="w-full resize-y rounded-md border border-zinc-300 bg-transparent px-4 py-3.5 text-zinc-950 outline-none transition placeholder:text-zinc-500 hover:border-zinc-400 focus:border-emerald-600 focus:ring-2 focus:ring-emerald-600/15 dark:border-zinc-700 dark:text-white dark:placeholder:text-zinc-400 dark:hover:border-zinc-600 dark:focus:border-emerald-400 dark:focus:ring-emerald-400/15"></textarea>
               </label>
             </div>
 
@@ -669,7 +669,7 @@ export function Home() {
             </p>
 
             <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <button type="submit" class="inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-emerald-600 px-6 py-3.5 font-semibold text-white outline-none transition-colors hover:bg-emerald-700 focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:bg-emerald-500 dark:text-black dark:hover:bg-emerald-400 dark:focus-visible:ring-emerald-400 dark:focus-visible:ring-offset-black">
+              <button type="submit" class="inline-flex min-h-12 items-center justify-center gap-3 rounded-md bg-emerald-700 px-6 py-3.5 font-semibold text-white outline-none transition-colors hover:bg-emerald-800 focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 dark:focus-visible:ring-emerald-400 dark:focus-visible:ring-offset-black">
                 Agendar meu diagnóstico
                 <i data-lucide="send" class="h-5 w-5" aria-hidden="true"></i>
               </button>
